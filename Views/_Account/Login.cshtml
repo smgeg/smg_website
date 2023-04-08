@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = Resources.Resource.Login;
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="section-40 section-md-75 bg-cover novi-background">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5 col-xl-4">
+                <h3>@Resources.Resource.Login</h3>
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                
+                <form class="form-modern" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="@Url.Action("Login" , "_Account")" novalidate="novalidate">
+                    @Html.AntiForgeryToken()
+                    <div class="form-wrap has-error">
+                        <input class="form-input form-control-has-validation" id="username" type="text" name="username" data-constraints="@@Required"><span class="form-validation"></span>
+                        <label class="form-label rd-input-label" for="username">@Resources.Resource.UserName</label>
+                    </div>
+                    <div class="form-wrap has-error">
+                        <input class="form-input form-control-has-validation" id="password" type="password" name="password" data-constraints="@@Required"><span class="form-validation"></span>
+                        <label class="form-label rd-input-label" for="password">@Resources.Resource.Password</label>
+                    </div>
+                    <button class="button button-primary button-block" type="submit">@Resources.Resource.Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+

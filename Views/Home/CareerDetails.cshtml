@@ -1,0 +1,98 @@
+﻿@using Website.Utility
+@model Website.Models.Job
+
+@{
+    ViewBag.Title = Utilities.IsArabic ? Model.NameAr : Model.NameEn;
+}
+
+
+<section class="section-60 section-md-75 section-xl-50 novi-background bg-whisperapprox bg-default">
+    <div class="container">
+        <div class="row row-50 row-fix">
+            <div class="col-lg-8 col-xl-9">
+                <article class="post post-single">
+
+                    <div class="post-header">
+                        <h4>@(Utilities.IsArabic ? Model.NameAr : Model.NameEn)</h4>
+                    </div>
+                    <div class="post-meta">
+                        <ul class="list-bordered-horizontal">
+
+                            @if (Model.CreatedOn.HasValue)
+                            {
+                                <li>
+                                    <dl class="list-terms-inline">
+                                        <dt>@Resource.Date</dt>
+                                        <dd>
+                                            <time datetime="2018-01-22">@Model.CreatedOn.Value.ToString("dd MMMM yyyy")</time>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="divider-fullwidth bg-gray-light"></div>
+                    
+                    @if (Utilities.IsArabic)
+                    {
+                        <div class="post-body">
+
+                            <h4 style="color: #ab232d">@Html.DisplayNameFor(model => model.ShortDescriptionAr).ToHtmlString().Replace("العربى", "")</h4>
+
+                            <p>@(Utilities.IsArabic ? Model.ShortDescriptionAr : Model.ShortDescriptionEn)</p>
+                        </div>
+                        if (!string.IsNullOrEmpty(Model.DescriptionAr))
+                        {
+                            <div class="divider-fullwidth bg-gray-light"></div>
+                            <div class="post-body">
+
+                                <h4 style="color: #ab232d">@Html.DisplayNameFor(model => model.DescriptionAr).ToHtmlString().Replace("العربى", "")</h4>
+
+                                <p>@(new HtmlString(Model.DescriptionAr))</p>
+                            </div>
+                        }
+
+                    }
+                    else
+                    {
+                        <div class="post-body">
+
+                        <h4 style="color: #ab232d">Short description</h4>
+
+                        <p>@(Utilities.IsArabic ? Model.ShortDescriptionAr : Model.ShortDescriptionEn)</p>
+                    </div>
+                        if (!string.IsNullOrEmpty(Model.DescriptionEn))
+                        {
+                            <div class="divider-fullwidth bg-gray-light"></div>
+                            <div class="post-body">
+
+                                <h4 style="color: #ab232d">Job details</h4>
+
+                                <p>@(new HtmlString(Model.DescriptionEn))</p>
+                            </div>
+                        }
+                    }
+
+                </article>
+            </div>
+            <div class="col-lg-4 col-xl-3">
+                <div class="blog-aside">
+                    <div class="blog-aside-item">
+                        @*<div class="post-image">
+                                <img src="~/Template/img/course/@Model.Image" alt="" width="230" height="200">
+                            </div>*@
+                        @if (Model.ExpirationDate.HasValue && DateTime.Now.Date > Model.ExpirationDate.Value)
+                        {
+                            /**/
+                            <p>@Resource.JobNotAvailable</p>
+                        }
+                        else
+                        {
+                        <a class="button button-primary button-block" href="@Url.Action("ApplyToCareer", "Home", new { id = Model.Id })">@Resource.Apply</a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

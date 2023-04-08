@@ -1,0 +1,128 @@
+﻿@model IEnumerable<Website.Models.Course>
+
+@{
+    ViewBag.Title = "الكورسات";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("اضافة", "Create")
+</p>
+<style>
+    .k-rtl .k-grid-header .k-filterable .k-link {
+        padding-left:0 !important;
+    }
+</style>
+@(Html.Kendo().Grid(Model)
+    .Name("grid")
+    .Columns(columns =>
+    {
+        columns.Bound(p => p.CourseTypeNameAr);
+        columns.Bound(p => p.Code).Width(120);
+        columns.Bound(p => p.NameAr);
+        columns.Bound(p => p.Price).Width(120);
+        columns.Bound(p => p.HourlyDuration).Width(120);
+        columns.Bound(p => p.LecturesCount).Width(125);
+        columns.Bound(p => p.Location).Width(120);
+        columns.Bound(p => p.Id).Title("").Width(140).ClientTemplate("<a href='Courses/Edit/#=Id#'>تعديل</a> <a href='Courses/Delete/#=Id#'>حذف</a>").Sortable(false).Filterable(false);
+    })
+    .HtmlAttributes(new { style = "height: 650px;" })
+    //.Pageable(pageable => pageable
+    //   .Input(true)
+    //   .Numeric(false)
+    // )
+    .Sortable().Groupable(g=>g.Enabled(true))
+    .Scrollable(scr => scr.Height(430))
+    .Filterable().Resizable(d=>d.Columns(true))
+    .DataSource(dataSource => dataSource
+        .Ajax()
+        //.PageSize(20)
+        .ServerOperation(false)
+        .Group(g=>g.Add(a=>a.CourseTypeNameAr))
+     )
+    .Events(e=>e.DataBound("onDataBound"))
+)
+<script>
+    function onDataBound() {
+        var grid = $("#grid").data("kendoGrid");
+        var dataView = grid.dataSource.view();
+
+        for (var i = 0; i < dataView.length; i++) {
+            for (var j = 0; j < dataView[i].items.length; j++) {
+                //if (dataView[i].items[j].status == "Closed") {
+                var uid = dataView[i].items[j].uid;
+                console.log($("#grid").find("tr[data-uid=" + uid + "]").prev("tr.k-grouping-row"));
+                grid.collapseGroup($("#grid").find("tr[data-uid=" + uid + "]").prev("tr.k-grouping-row"));
+            }
+            /*}*/
+        }
+    }
+</script>
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseTypeNameAr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameAr)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HourlyDuration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LecturesCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            مفعل
+        </th>
+      
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseTypeNameAr)
+        </td>
+        <td>
+    @Html.DisplayFor(modelItem => item.Code)
+</td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameAr)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HourlyDuration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LecturesCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <td>
+            @Html.Kendo().CheckBox().Name("cb" + item.Id).Enable(false).Checked(item.IsEnable)
+        </td>
+        
+        <td>
+            @Html.ActionLink("تعديل", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("حذف", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>*@

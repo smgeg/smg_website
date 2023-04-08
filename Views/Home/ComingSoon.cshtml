@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Coming Soon";
+    Layout = null;
+}
+<head>
+    <title>SMG For Consultancy & Training Solutions - @ViewBag.Title</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Arvo:400,700%7COpen+Sans:300,300italic,400,400italic,700italic,800%7CUbuntu:500">
+    <link rel="stylesheet" href="~/Template/css/bootstrap.css">
+    <link rel="stylesheet" href="~/Template/css/style.css">
+</head>
+<section class="section section-single novi-background bg-gray-darker novi-background overlay-8 custom-bg-image" style="background-image: url(@Url.Content("~/Template/images/bg-coming-soon.jpg"));">
+    <div class="section-single-inner">
+        <div class="section-single-header">
+            <div class="page-head-inner">
+                <div class="container text-center"><a class="brand brand-md brand-inverse" href="#"><img src="~/Template/images/logo-inverse-230x49.png" alt="" width="230" height="49"></a></div>
+            </div>
+        </div>
+        <div class="section-single-main">
+            <div class="container">
+                <h2 class="text-style-lighter">We're getting ready<br>to launch in</h2>
+                <div class="block-centered">
+                    <div class="countdown countdown-default countdown-inverse is-countdown" data-type="until" data-time="31 Dec 2018 16:00" data-format="dhms"><span class="countdown-row countdown-show0"></span></div>
+                </div>
+                <p class="text-white" style="opacity: 0.8;">Our website is under construction, we are working very hard<br class="d-none d-sm-block"> to give you the best experience on our new web site.</p>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-6 col-lg-5 col-xl-4">
+                        <h5>Stay ready, we`re launching soon</h5>
+                        <h5><a href="@Url.Action("Index" , "Home")">Go to demo</a></h5>
+                        @*<form class="rd-mailform form-modern" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php" novalidate="novalidate">
+                            <div class="form-wrap">
+                                <label class="form-label form-label-white-05 rd-input-label" for="contact-email">Email</label>
+                                <input class="form-input form-control-has-validation form-control-last-child" id="contact-email" type="email" name="email" data-constraints="@@Email @@Required"><span class="form-validation"></span>
+                            </div>
+                            <button class="button button-primary button-block" type="submit">Subscribe</button>
+                        </form>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="section-single-footer">
+            <div class="container text-center">
+                <div class="row row-fix">
+                    <div class="col-12">
+                        @*<p class="rights"><span>Investex</span><span>&nbsp;©&nbsp;</span><span class="copyright-year">2022</span><span>All Rights Reserved</span><br class="d-md-none"><a class="link-primary-inverse" href="#">Terms of Use</a><span>and</span><a class="link-primary-inverse" href="privacy-policy.html">Privacy Policy</a></p>*@
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</section>

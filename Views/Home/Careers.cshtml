@@ -1,0 +1,64 @@
+﻿@using Website.Utility
+@model List<Website.Models.Job>
+
+@{
+    ViewBag.Title = Resource.L_Menu_Careers;
+}
+
+
+<section class="section-40 section-md-60 section-lg-90 section-xl-120 bg-gray-dark page-title-wrap overlay-5 custom-bg-image" style="background-image: url('@Url.Content("~/Template/images/bg-blog.jpg")');">
+    <div class="container">
+        <div class="page-title text-center">
+            <h2>@Resource.L_Menu_Careers</h2>
+        </div>
+    </div>
+</section>
+<section class="section-50 section-md-75 section-xl-50 bg-whisperapprox  novi-background bg-cover bg-default">
+    <div class="container">
+        <div class="row row-fix justify-content-md-center">
+            <div class="col-xl-10 post-classic-wrap">
+                @if (!Model.Any())
+                {
+                    <h5>@Resource.NoOpeningVacations</h5>
+                }
+                @foreach (var item in Model)
+                {
+                    <article class="post-modern novi-background">
+                        <div class="post-header">
+                            <h5><a href="@Url.Action("CareerDetails" , "Home" , new { id = item.Id})">@(Utilities.IsArabic ? item.NameAr : item.NameEn)</a></h5>
+                        </div>
+                        <div class="post-body">
+                            <div class="post-inset">
+                                <p class="text-gray-05">@(Utilities.IsArabic ? item.ShortDescriptionAr : item.ShortDescriptionEn)</p>
+                            </div>
+                        </div>
+                        <div class="post-footer novi-background">
+                            <div class="post-meta">
+                                <ul class="post-list">
+                                    <li class="object-inline">
+                                        <span class="icon novi-icon icon-xxs icon-black material-icons-query_builder"></span>
+                                        <time class="text-gray-05" datetime="2018-01-01">@item.CreatedOn.Value.ToString("dd MMMM yyyy")</time>
+                                    </li>
+                                    @*<li class="object-inline">
+                                        <span class="icon novi-icon icon-xxs icon-black material-icons-loyalty"></span>
+                                        <ul class="list-tags-inline">
+                                            <li><a href="#">Lesson</a></li>
+                                            <li><a href="#">Student</a></li>
+                                        </ul>
+                                    </li>*@
+                                </ul>
+                            </div>
+                            @*<div class="post-type"><span class="icon novi-icon icon-xxs icon-black material-icons-work"></span></div>*@
+                        </div>
+                    </article>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+

@@ -1,0 +1,171 @@
+﻿@model Website.Models.Training
+
+@{
+    ViewBag.Title = "الدورات  التدريبية";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>Course</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TrainingTypeNameAr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrainingTypeNameAr)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameAr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameAr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameEn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameEn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescriptionAr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescriptionAr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescriptionEn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescriptionEn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HourlyDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HourlyDuration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LecturesCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LecturesCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DetailsAr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DetailsAr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DetailsEn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DetailsEn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TargetAr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TargetAr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TargetEn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TargetEn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContentDetailsAr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContentDetailsAr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContentDetailsEn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContentDetailsEn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CoursePersonsAr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoursePersonsAr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CoursePersonsEn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoursePersonsEn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("تعديل", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("عودة الى الدورات  التدريبية", "Index")
+</p>

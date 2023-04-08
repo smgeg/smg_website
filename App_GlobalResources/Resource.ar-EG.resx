@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutSMG_Desc_1" xml:space="preserve">
+    <value>تطمح شركة أس . أم . جى للاستشارات وحلول التدريب إلى
+ان تترك بصمه فى سوق الاستشارات الإداريه والتطوير المستمر
+للشركات والأفراد وأن نكون شريك ناجح معهم وأن تجعل من
+اس .ام . جى للاستشارات وحلول التدريب اسما يشار إليه ورمزا
+يتصل بالجودة والإتقان والاحترافية » هكذا بدأ الحلم من اوائل2013 
+ وبفضل الله عز وجل وبفضل كوادرنا أصبح الحلم حقيقه</value>
+  </data>
+  <data name="AboutSMG_Desc_2" xml:space="preserve">
+    <value>شركتنا أس . أم . جى . للاستشارات وحلول التدريب ومقرها
+القاهره » مصر ؛ تأسست عام 2021 ورغم المسافة بين هذا
+الحلم وبدء خطوات تنفيذه إلا أننا عقدنا العزم على المضى
+رحلتنا من سماء الخيال إلى أرض الواقع .</value>
+  </data>
+  <data name="AboutSMG_Desc_3" xml:space="preserve">
+    <value>متوكلون
+بفضل الله وبفضل كافه الطاقات , سخرنا جميع الإمكانيات
+فى سبيل الانخراط فى عملنا بأفكار خارج الصندوق لنصل مع
+شركاء النجاح لتوصيلهم لتحقيق أقصى الاستفادة من تقليل
+التكاليف وتعظيم الارباح والحفاظ على كوادرهم من خلال
+تقديم أحدث البرامج التدريبية العملية والتى تواكب أحدث
+النظريات والتطبيقات العالمية الموضوعة من أجل تطوير العاملين</value>
+  </data>
+  <data name="AboutSMG_Title" xml:space="preserve">
+    <value>عن  أس .أم . جى</value>
+  </data>
+  <data name="CEO" xml:space="preserve">
+    <value>الرئيس التنفيذى</value>
+  </data>
+  <data name="CEOMessage_Desc_1" xml:space="preserve">
+    <value>نحن فى أس . أم . جى
+للإستشارات وحلول التدريب نعتقد
+أننا سنكون رواد في السوق فى مجالاتنا
+لذا أشكر فريق العمل الذهبى لدى بالشركه
+لشغفهم لبدء هذا الحلم لتصبح واحده من
+اكبر شركات الإستشارات والتدريب لتكون
+جزءاً من رؤيه مصر 2030 فى إطار شعار</value>
+  </data>
+  <data name="CEOMEssage_Desc_2" xml:space="preserve">
+    <value>(التنميه المستدامه الشامله)</value>
+  </data>
+  <data name="CEOMessage_Title" xml:space="preserve">
+    <value>كلمة الرئيس التنفيذى</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>البريد</value>
+  </data>
+  <data name="GetInTouch" xml:space="preserve">
+    <value>كن على اتصال</value>
+  </data>
+  <data name="Headquarters" xml:space="preserve">
+    <value>المركز الرئيسى</value>
+  </data>
+  <data name="HowToFindUs" xml:space="preserve">
+    <value>كيف تصل الينا</value>
+  </data>
+  <data name="HowToFindUs_Desc" xml:space="preserve">
+    <value>إذا كانت لديك أي أسئلة ، فما عليك سوى ملء نموذج الاتصال وسنقوم بالرد عليك قريبًا</value>
+  </data>
+  <data name="InvertLang" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="L_Address" xml:space="preserve">
+    <value>17 شارع ابراهيم بن المهدي - مدينة نصر - القاهرة مصر</value>
+  </data>
+  <data name="L_Address_1" xml:space="preserve">
+    <value>17 شارع ابراهيم بن المهدي </value>
+  </data>
+  <data name="L_Address_2" xml:space="preserve">
+    <value> مدينة نصر - القاهرة  - مصر</value>
+  </data>
+  <data name="L_AllRightsReserved" xml:space="preserve">
+    <value>كل الحقوق محفوظة</value>
+  </data>
+  <data name="L_FollowUs" xml:space="preserve">
+    <value>تابعنا</value>
+  </data>
+  <data name="L_Hint_Desc" xml:space="preserve">
+    <value>أس . أم . جى ليست مجرد شركة ، إنها شريكك لتحسين حياتك المهنية وتزويدك في أي مكان وفي أي وقت.</value>
+  </data>
+  <data name="L_Hint_Title" xml:space="preserve">
+    <value>معًا ، يمكننا تمكين عملك لتحقيق المزيد.</value>
+  </data>
+  <data name="L_LatestNews" xml:space="preserve">
+    <value>اخر الاخبار</value>
+  </data>
+  <data name="L_MeetOurTeam" xml:space="preserve">
+    <value>قابل فريقنا</value>
+  </data>
+  <data name="L_Menu_AboutUs" xml:space="preserve">
+    <value>من نحن</value>
+  </data>
+  <data name="L_Menu_Careers" xml:space="preserve">
+    <value>الوظائف</value>
+  </data>
+  <data name="L_Menu_ContactUs" xml:space="preserve">
+    <value>اتصل بنا</value>
+  </data>
+  <data name="L_Menu_Courses" xml:space="preserve">
+    <value>الكورسات التدريبية</value>
+  </data>
+  <data name="L_Menu_Gallery" xml:space="preserve">
+    <value>معرض الصور</value>
+  </data>
+  <data name="L_Menu_Home" xml:space="preserve">
+    <value>الرئيسية</value>
+  </data>
+  <data name="L_Menu_Seminars" xml:space="preserve">
+    <value>الندوات</value>
+  </data>
+  <data name="L_Menu_Services" xml:space="preserve">
+    <value>خدماتنا</value>
+  </data>
+  <data name="L_OurGoal" xml:space="preserve">
+    <value>اهدافنا</value>
+  </data>
+  <data name="L_OurGoal_1_Desc" xml:space="preserve">
+    <value>مساعده الشركات للوصول إلى الوضع
+الأمثل فى التشغيل لتعظيم الارباح وتقليل
+التكاليف من خلال تقديم مصادر خارجية
+لخدمات مشتركة متكاملة الجوده</value>
+  </data>
+  <data name="L_OurGoal_1_Title" xml:space="preserve">
+    <value>الوضع الأمثل للشركات</value>
+  </data>
+  <data name="L_OurGoal_2_Desc" xml:space="preserve">
+    <value>التأثير بشكل مباشر وغير مباشر فى مجال
+الاستشارات الإدارية</value>
+  </data>
+  <data name="L_OurGoal_2_Title" xml:space="preserve">
+    <value>الاستشارات الإدارية</value>
+  </data>
+  <data name="L_OurGoal_3_Desc" xml:space="preserve">
+    <value>أن نكون رواد فى مجالنا من أجل نقل
+خبراتنا إلى شركاء نجاحنا</value>
+  </data>
+  <data name="L_OurGoal_3_Title" xml:space="preserve">
+    <value>نقل خبرتنا</value>
+  </data>
+  <data name="L_OurGoal_4_Desc" xml:space="preserve">
+    <value>المساهمه فى تصعيد جيل جديد من الشباب
+الواعى خدمه بلدنا الحبيبه مصر</value>
+  </data>
+  <data name="L_OurGoal_4_Title" xml:space="preserve">
+    <value>تصعيد جيل جديد</value>
+  </data>
+  <data name="L_OurMission" xml:space="preserve">
+    <value>رؤيتنا</value>
+  </data>
+  <data name="L_OurPartners" xml:space="preserve">
+    <value>شركاء النجاح</value>
+  </data>
+  <data name="L_OurPrinciples" xml:space="preserve">
+    <value>مبادئنا</value>
+  </data>
+  <data name="L_OurPrinciples_1" xml:space="preserve">
+    <value>نعتقد اعتقاداً راسخاً بأنه فى مجال
+إداره الشركات لا يوجد مقياس واحد</value>
+  </data>
+  <data name="L_OurPrinciples_2" xml:space="preserve">
+    <value>لذلك تسعى
+مجموعه أس . أم . جى للاستشارات
+وحلول التدريب أن تكون من الشركات
+الرائده فى مجالها بتقديم أفضل الحلول
+الذكية والمهنية التى تمكن المؤسسات
+من ‎ادارة وتطوير استراتجيتة مواردها تماشيا مع الحدث المعايير</value>
+  </data>
+  <data name="L_OurServices" xml:space="preserve">
+    <value>خدماتنا</value>
+  </data>
+  <data name="L_OurServices_1_Desc" xml:space="preserve">
+    <value>نحن نعمل على مساعدة الشركات من خلال استشارات تطوير البرمجيات التى تزود الشركات بأحدث حلول تكنولوجيا المعلومات</value>
+  </data>
+  <data name="L_OurServices_1_Title" xml:space="preserve">
+    <value>تطوير البرمجيات</value>
+  </data>
+  <data name="L_OurServices_2_Desc" xml:space="preserve">
+    <value>نحن نعمل بجد لإنشاء وتنفيذ وتقديم خدمات استشارية وإدارية عالية الجودة.</value>
+  </data>
+  <data name="L_OurServices_2_Title" xml:space="preserve">
+    <value>الاستشارات الادارية</value>
+  </data>
+  <data name="L_OurServices_3_Desc" xml:space="preserve">
+    <value>تقدم اس . ام . جى مجموعة شاملة من الخدمات التي تتوقعها أي شركة من شركة ادارة الموارد البشرية.</value>
+  </data>
+  <data name="L_OurServices_3_Title" xml:space="preserve">
+    <value>ادارة الموارد البشرية</value>
+  </data>
+  <data name="L_OurServices_4_Desc" xml:space="preserve">
+    <value>نقدم التدريب ونقل المعرفة بناءً على احتياجات التعلم ومستويات الوعي.</value>
+  </data>
+  <data name="L_OurServices_4_Title" xml:space="preserve">
+    <value>التدريب و التطوير</value>
+  </data>
+  <data name="L_QuickLinks" xml:space="preserve">
+    <value>روابط سريعة</value>
+  </data>
+  <data name="L_SMG" xml:space="preserve">
+    <value>أس . أم . جى</value>
+  </data>
+  <data name="L_Title" xml:space="preserve">
+    <value>أس . أم . جى . للاستشارات وحلول التدريب</value>
+  </data>
+  <data name="L_WhyClientsChooseUs" xml:space="preserve">
+    <value>لماذا يختارنا العملاء</value>
+  </data>
+  <data name="L_WhyClientsChooseUs_1_Desc" xml:space="preserve">
+    <value>نعمل في جو من الثقة والصداقة الحميمة ، حيث يساعد الشركاء بعضهم البعض.</value>
+  </data>
+  <data name="L_WhyClientsChooseUs_1_Title" xml:space="preserve">
+    <value>المهنيين الأكفاء</value>
+  </data>
+  <data name="L_WhyClientsChooseUs_2_Desc" xml:space="preserve">
+    <value>نحن ملتزمون بتزويد العملاء بأفضل قيمة وخدمة في المجال</value>
+  </data>
+  <data name="L_WhyClientsChooseUs_2_Title" xml:space="preserve">
+    <value>خدمة متفوقة</value>
+  </data>
+  <data name="L_WhyClientsChooseUs_3_Desc" xml:space="preserve">
+    <value>تقديم قيمة من خلال العمولات المباشرة والخدمات المضافة.</value>
+  </data>
+  <data name="L_WhyClientsChooseUs_3_Title" xml:space="preserve">
+    <value>أسعار تنافسية</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>الرسالة</value>
+  </data>
+  <data name="MrAmrWagih" xml:space="preserve">
+    <value>أ . عمرو وجيه</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="Ourvalue_Desc" xml:space="preserve">
+    <value>أس . أم . جى هو بيت خبرة متخصص في الاستشارات والتوريدات ، لذلك فهو يركز على استشارات الأعمال وإدارة رأس المال البشري</value>
+  </data>
+  <data name="Ourvalue_Item_1" xml:space="preserve">
+    <value>المصداقية</value>
+  </data>
+  <data name="Ourvalue_Item_2" xml:space="preserve">
+    <value>المسئولية</value>
+  </data>
+  <data name="Ourvalue_Item_3" xml:space="preserve">
+    <value>الدقة</value>
+  </data>
+  <data name="Ourvalue_Item_4" xml:space="preserve">
+    <value>الخصوصية</value>
+  </data>
+  <data name="Ourvalue_Item_5" xml:space="preserve">
+    <value>الشفافية</value>
+  </data>
+  <data name="Ourvalue_Item_6" xml:space="preserve">
+    <value>الجودة</value>
+  </data>
+  <data name="Ourvalue_Title" xml:space="preserve">
+    <value>قيمنا</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>تنظيف</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>ارسال</value>
+  </data>
+  <data name="Socialmedia" xml:space="preserve">
+    <value>التواصل الاجتماعى</value>
+  </data>
+  <data name="Telephone" xml:space="preserve">
+    <value>تليفون</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>تقديم</value>
+  </data>
+  <data name="Applyforjob" xml:space="preserve">
+    <value>التقديم على وظيفة</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>الدولة</value>
+  </data>
+  <data name="CoursesGallerries" xml:space="preserve">
+    <value>معرض صور الدورات التدريبية</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="ForApplying" xml:space="preserve">
+    <value>على التقديم فى الوظيفة</value>
+  </data>
+  <data name="ForRegisteration" xml:space="preserve">
+    <value>على التسجيل معنا</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>عدد الساعات</value>
+  </data>
+  <data name="JobDescription" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="JobNotAvailable" xml:space="preserve">
+    <value>الوظيفة غير متاحة فى الوقت الحالى</value>
+  </data>
+  <data name="Lectures" xml:space="preserve">
+    <value>عدد المحاضرات</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>الموقع</value>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>رقم الموبايل</value>
+  </data>
+  <data name="NoOpeningVacations" xml:space="preserve">
+    <value>لا يوجد وظائف فى الوقت الحالى</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>الوظيفة</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>السعر</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>تسجيل</value>
+  </data>
+  <data name="RegisterFor" xml:space="preserve">
+    <value>التسجيل فى </value>
+  </data>
+  <data name="RegisterNow" xml:space="preserve">
+    <value>اشترك الان</value>
+  </data>
+  <data name="SeminarsGallerries" xml:space="preserve">
+    <value>معرض صور الندوات</value>
+  </data>
+  <data name="ServicesOverview" xml:space="preserve">
+    <value>نظرة عامة عن خدماتنا</value>
+  </data>
+  <data name="Services_Desc" xml:space="preserve">
+    <value>نحن نقدم خدمات شاملة في العديد من المجالات التي تعتبر مهمة جدا لكل شركة.</value>
+  </data>
+  <data name="S_Services_1_Desc" xml:space="preserve">
+    <value>&lt;p class = "text-gray-05"&gt; نحن نعمل بجد لإنشاء وتنفيذ وتقديم خدمات استشارية وإدارية عالية الجودة. بالإضافة إلى تزويدك بالأدوات التي تحتاجها لتحسين عملياتك وهيكل إدارتك ، وتعزيز سعادة العملاء وإضافة قيمة لشركتك. &lt;/ p&gt;
+                     &lt;p class = "text-gray-05"&gt; نساعدك في بناء وإدارة أنظمة الإدارة السليمة التي تتوافق مع المعايير الدولية. بالإضافة إلى إعادة عرض العمليات الحالية وإعادة هندستها لتحسين الممارسة الحالية وتحسينها ، وضمان فعالية النظام ومساعدتك في الحصول على شهادتك. &lt;/ p&gt;</value>
+  </data>
+  <data name="S_Services_2_Desc" xml:space="preserve">
+    <value>&lt;p class = "text-gray-05"&gt; تقدم SMG مجموعة شاملة من الخدمات التي تتوقعها أي شركة من شركة تعهيد الموارد البشرية. &lt;/ p&gt;
+                     &lt;p class = "text-grey-05"&gt; يشمل الاستعانة بمصادر خارجية ما يلي: &lt;/ p&gt;
+                     &lt;ul class = "list-marked"&gt;
+                         &lt;li style = "font-size: 12px"&gt; تدقيق شؤون الموظفين والرواتب &lt;/ li&gt;
+                         &lt;li style = "font-size: 12px"&gt; نظام إدارة كشوف المرتبات &lt;/ li&gt;
+                         &lt;li style = "font-size: 12px"&gt; الهياكل التنظيمية &lt;/ li&gt;
+                         &lt;li style = "font-size: 12px"&gt; تدريب &lt;/ li&gt;
+                         &lt;li style = "font-size: 12px"&gt; خدمات اكتساب المواهب &lt;/ li&gt;
+                     &lt;/ul&gt;</value>
+  </data>
+  <data name="S_Services_3_Desc" xml:space="preserve">
+    <value>&lt;p class = "text-gray-05"&gt; يساعد المدربون ذوو المؤهلات العالية الأفراد والشركات على التعلم وتحسين مؤهلاتهم للمنافسة في السوق. &lt;/ p&gt;
+                     &lt;p class = "text-gray-05"&gt; نقدم التدريب ونقل المعرفة بناءً على احتياجات التعلم ومستويات الوعي. &lt;/ p&gt;
+                     &lt;ul class = "list-marked"&gt;
+                         &lt;li style = "font-size: 12px"&gt; Excel للموارد البشرية &lt;/li&gt;
+                         &lt;li style = "font-size: 12px"&gt; دورة الموارد البشرية المهنية &lt;/ li&gt;
+                         &lt;li style = "font-size: 12px"&gt; دورة المهارات الشخصية &lt;/ li&gt;
+                         &lt;li style = "font-size: 12px"&gt; هيئة خاصة للشركات &lt;/ li&gt;
+                     &lt;/ul&gt;</value>
+  </data>
+  <data name="S_Services_4_Desc" xml:space="preserve">
+    <value>&lt;p class = "text-gray-05"&gt; نساعد الشركات من خلال استشارات تطوير البرمجيات التي تزود الشركات بأحدث تكنولوجيا البرمجيات / حلول تكنولوجيا المعلومات لإضافة قيمة حقيقية بسعر معقول ، مثل: &lt;/ p&gt;
+                     &lt;ul class = "list-marked"&gt;
+                         &lt;li style = "font-size: 12px"&gt; نظام تخطيط موارد المؤسسات ERP &lt;/ li&gt;
+                         &lt;li style = "font-size: 12px"&gt; موقع الانترنت&lt;/ li&gt;
+                         &lt;li style = "font-size: 12px"&gt; تطبيقات الجوال &lt;/ li&gt;
+                     &lt;/ul&gt;</value>
+  </data>
+  <data name="Thanks" xml:space="preserve">
+    <value>شكرا لك</value>
+  </data>
+  <data name="UploadyourCV" xml:space="preserve">
+    <value>رفع  سيرتك الذاتيه</value>
+  </data>
+  <data name="WeWillContactasap" xml:space="preserve">
+    <value>سنتواصل معك فى اسرع وقت</value>
+  </data>
+  <data name="WhatsappMobile" xml:space="preserve">
+    <value>رقم الواتساب</value>
+  </data>
+  <data name="AbdElhafiz" xml:space="preserve">
+    <value>عبدالحفيظ</value>
+  </data>
+  <data name="AdminOfficer" xml:space="preserve">
+    <value>المسئول الادارى</value>
+  </data>
+  <data name="AhmedMahmoud" xml:space="preserve">
+    <value>احمد محمود</value>
+  </data>
+  <data name="AymanSaad" xml:space="preserve">
+    <value>ايمن سعد</value>
+  </data>
+  <data name="BusinessDeveloper" xml:space="preserve">
+    <value>مطور الاعمال</value>
+  </data>
+  <data name="COO" xml:space="preserve">
+    <value>الرئيس التنفيذى للعمليات</value>
+  </data>
+  <data name="DohaShaker" xml:space="preserve">
+    <value>ضحى شاكر</value>
+  </data>
+  <data name="FlutterDeveloper" xml:space="preserve">
+    <value>تطبيقات الجوال</value>
+  </data>
+  <data name="HossamNagy" xml:space="preserve">
+    <value>حسام ناجى</value>
+  </data>
+  <data name="HumanResource" xml:space="preserve">
+    <value>الموارد البشرية</value>
+  </data>
+  <data name="MahmoudAnasary" xml:space="preserve">
+    <value>محمود الأنصارى</value>
+  </data>
+  <data name="Marketing" xml:space="preserve">
+    <value>التسويق</value>
+  </data>
+  <data name="PassantMostafa" xml:space="preserve">
+    <value>بسنت مصطفى</value>
+  </data>
+  <data name="RawanOsama" xml:space="preserve">
+    <value>روان اسامه الاعصر</value>
+  </data>
+  <data name="Sales" xml:space="preserve">
+    <value>المبيعات</value>
+  </data>
+  <data name="ViceCEO" xml:space="preserve">
+    <value>نائب الرئيس التنفيذى</value>
+  </data>
+  <data name="Team" xml:space="preserve">
+    <value>فريق العمل</value>
+  </data>
+  <data name="ThisCourseApprovedBy" xml:space="preserve">
+    <value>هذا الكورس معتمد من : </value>
+  </data>
+  <data name="InvalidUsernameOrPassword" xml:space="preserve">
+    <value>اسم المستخدم او كلمة المرور غير صحيحة</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>اسم المستخدم</value>
+  </data>
+  <data name="Signout" xml:space="preserve">
+    <value>خروج</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>مرحبا</value>
+  </data>
+</root>

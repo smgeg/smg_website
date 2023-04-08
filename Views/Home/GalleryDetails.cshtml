@@ -1,0 +1,43 @@
+﻿@model Website.Models.Gallery
+@{
+    ViewBag.Title = "Gallery Details";
+}
+
+<section class="section-66 novi-background bg-cover bg-whisperapprox">
+    <div class="container text-center">
+        <h4>@(Website.Utility.Utilities.IsArabic ? Model.NameAr : Model.NameEn)</h4>
+        <h5>@(Website.Utility.Utilities.IsArabic ? Model.DescriptionAr : Model.DescriptionEn)</h5>
+        <div class="divider"></div>
+    </div>
+</section>
+
+<section class="section-50 section-md-90 section-lg-bottom-120 section-xl-bottom-165">
+    <div class="container isotope-wrap">
+        <div class="row row-40 text-center">
+            <div class="col-12">
+                <div class="row isotope isotope-gutter-default isotope--loaded" data-isotope-layout="fitRows" data-isotope-group="gallery" data-lightgallery="group" data-lg-thumbnail="false">
+                    @{int i = 0; }
+                    @foreach (var image in Model.Images)
+                    {
+                        <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category @i" style="position: absolute; left: 0px; top: 0px;">
+                            <div class="thumbnail thumbnail-variant-3">
+                                @*<a class="link link-external" href="#">
+                                    <span class="novi-icon icon icon-sm fa fa-link"></span>
+                                </a>*@
+                                <a class="img-link" href="@Url.Content("~/template/img/gallery/" + Model.Id + "/" + image)" data-lightgallery="item">
+                                    <img class="img-item" src="@Url.Content("~/template/img/gallery/" + Model.Id + "/" + image)" alt="" width="370" height="278">
+                                </a>
+                                <div class="caption">
+                                    <div class="link link-original"></div>
+                                </div>
+                            </div>
+                        </div>
+                        i++;
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

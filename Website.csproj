@@ -1,0 +1,749 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\Api_HR\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\..\Api_HR\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{87363EA8-C2A4-4349-A35A-805FA1913ACD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Website</RootNamespace>
+    <AssemblyName>Website</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\Api_HR\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\Api_HR\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Kendo.Mvc, Version=2018.3.1017.545, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Kendo.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\Api_HR\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Api_HR\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Api_HR\packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Api_HR\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Api_HR\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Api_HR\packages\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Api_HR\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Api_HR\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Api_HR\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Api_HR\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Api_HR\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\Api_HR\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\..\Api_HR\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\..\Api_HR\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\..\Api_HR\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\Resource.ar-EG.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.ar-EG.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BannersController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CourseApprovalsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SystemUsersController.cs" />
+    <Compile Include="Areas\Admin\Controllers\JobsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BlogsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\GalleriesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\JobUsersController.cs" />
+    <Compile Include="Areas\Admin\Controllers\RegisterUsersController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TrainingsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CoursesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CourseTypesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TrainingTypesController.cs" />
+    <Compile Include="Context\MyContext.cs" />
+    <Compile Include="Controllers\_AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Filters\InternationalizationAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208192117332_init.cs" />
+    <Compile Include="Migrations\202208192117332_init.designer.cs">
+      <DependentUpon>202208192117332_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208200658284_init1.cs" />
+    <Compile Include="Migrations\202208200658284_init1.designer.cs">
+      <DependentUpon>202208200658284_init1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208200735101_setcourcer.cs" />
+    <Compile Include="Migrations\202208200735101_setcourcer.designer.cs">
+      <DependentUpon>202208200735101_setcourcer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208200921048_setcourcerصي.cs" />
+    <Compile Include="Migrations\202208200921048_setcourcerصي.designer.cs">
+      <DependentUpon>202208200921048_setcourcerصي.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208200942370_setcourcerصي1.cs" />
+    <Compile Include="Migrations\202208200942370_setcourcerصي1.designer.cs">
+      <DependentUpon>202208200942370_setcourcerصي1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208201027230_setcour.cs" />
+    <Compile Include="Migrations\202208201027230_setcour.designer.cs">
+      <DependentUpon>202208201027230_setcour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208201219592_setcour1.cs" />
+    <Compile Include="Migrations\202208201219592_setcour1.designer.cs">
+      <DependentUpon>202208201219592_setcour1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208201509575_setcour2.cs" />
+    <Compile Include="Migrations\202208201509575_setcour2.designer.cs">
+      <DependentUpon>202208201509575_setcour2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208211944086_setcoursd.cs" />
+    <Compile Include="Migrations\202208211944086_setcoursd.designer.cs">
+      <DependentUpon>202208211944086_setcoursd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208221640438_setcoursdjh.cs" />
+    <Compile Include="Migrations\202208221640438_setcoursdjh.designer.cs">
+      <DependentUpon>202208221640438_setcoursdjh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208221732255_setcoursdjhlk.cs" />
+    <Compile Include="Migrations\202208221732255_setcoursdjhlk.designer.cs">
+      <DependentUpon>202208221732255_setcoursdjhlk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208271534403_asdlkjklfdxdf.cs" />
+    <Compile Include="Migrations\202208271534403_asdlkjklfdxdf.designer.cs">
+      <DependentUpon>202208271534403_asdlkjklfdxdf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208271610256_asdlkjklfdxdfjh.cs" />
+    <Compile Include="Migrations\202208271610256_asdlkjklfdxdfjh.designer.cs">
+      <DependentUpon>202208271610256_asdlkjklfdxdfjh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208272006588_asdlkjklfdxdfj]khhgh.cs" />
+    <Compile Include="Migrations\202208272006588_asdlkjklfdxdfj]khhgh.designer.cs">
+      <DependentUpon>202208272006588_asdlkjklfdxdfj]khhgh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209150958198_jobs.cs" />
+    <Compile Include="Migrations\202209150958198_jobs.designer.cs">
+      <DependentUpon>202209150958198_jobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209151047237_jobsshort.cs" />
+    <Compile Include="Migrations\202209151047237_jobsshort.designer.cs">
+      <DependentUpon>202209151047237_jobsshort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209171220426_jobsusers.cs" />
+    <Compile Include="Migrations\202209171220426_jobsusers.designer.cs">
+      <DependentUpon>202209171220426_jobsusers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209171302195_jobsuserssd.cs" />
+    <Compile Include="Migrations\202209171302195_jobsuserssd.designer.cs">
+      <DependentUpon>202209171302195_jobsuserssd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210031907046_sdasdf.cs" />
+    <Compile Include="Migrations\202210031907046_sdasdf.designer.cs">
+      <DependentUpon>202210031907046_sdasdf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210031917089_sdasd45.cs" />
+    <Compile Include="Migrations\202210031917089_sdasd45.designer.cs">
+      <DependentUpon>202210031917089_sdasd45.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210031941388_sdasd88.cs" />
+    <Compile Include="Migrations\202210031941388_sdasd88.designer.cs">
+      <DependentUpon>202210031941388_sdasd88.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210032006376_sdasdoo5.cs" />
+    <Compile Include="Migrations\202210032006376_sdasdoo5.designer.cs">
+      <DependentUpon>202210032006376_sdasdoo5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210282025265_addcoursecode3.cs" />
+    <Compile Include="Migrations\202210282025265_addcoursecode3.designer.cs">
+      <DependentUpon>202210282025265_addcoursecode3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210282045203_addcoursecodeas.cs" />
+    <Compile Include="Migrations\202210282045203_addcoursecodeas.designer.cs">
+      <DependentUpon>202210282045203_addcoursecodeas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211031532296_addjobexpiry.cs" />
+    <Compile Include="Migrations\202211031532296_addjobexpiry.designer.cs">
+      <DependentUpon>202211031532296_addjobexpiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211031537465_addjobexpiry2.cs" />
+    <Compile Include="Migrations\202211031537465_addjobexpiry2.designer.cs">
+      <DependentUpon>202211031537465_addjobexpiry2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212241040143_addisenabled.cs" />
+    <Compile Include="Migrations\202212241040143_addisenabled.designer.cs">
+      <DependentUpon>202212241040143_addisenabled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301210651318_courseapproval.cs" />
+    <Compile Include="Migrations\202301210651318_courseapproval.designer.cs">
+      <DependentUpon>202301210651318_courseapproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301210700167_courseapproval1.cs" />
+    <Compile Include="Migrations\202301210700167_courseapproval1.designer.cs">
+      <DependentUpon>202301210700167_courseapproval1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301241501046_addlogoToApprov.cs" />
+    <Compile Include="Migrations\202301241501046_addlogoToApprov.designer.cs">
+      <DependentUpon>202301241501046_addlogoToApprov.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302020925560_adduserCourse.cs" />
+    <Compile Include="Migrations\202302020925560_adduserCourse.designer.cs">
+      <DependentUpon>202302020925560_adduserCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AgricultureNetworkUser.cs" />
+    <Compile Include="Models\Banner.cs" />
+    <Compile Include="Models\BasicModel.cs" />
+    <Compile Include="Models\Blog.cs" />
+    <Compile Include="Models\CourseApproval.cs" />
+    <Compile Include="Models\UserCourseCollection.cs" />
+    <Compile Include="Models\CourseApprovalCollection.cs" />
+    <Compile Include="Models\Gallery.cs" />
+    <Compile Include="Models\GalleryImage.cs" />
+    <Compile Include="Models\Job.cs" />
+    <Compile Include="Models\JobUsers.cs" />
+    <Compile Include="Models\RegisteredUser.cs" />
+    <Compile Include="Models\Training.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\CourseType.cs" />
+    <Compile Include="Models\TrainingType.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\Utilities.cs" />
+    <Compile Include="ViewModels\AccountViewModels.cs" />
+    <Compile Include="ViewModels\BasicIdNameViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="logo.ico" />
+    <Content Include="MailTemplates\RegisterUserForJob.html" />
+    <Content Include="MailTemplates\RegisterUserForCourse.html" />
+    <Content Include="Template\css\animate.css" />
+    <Content Include="Template\css\bootstrap7-rtl.min.css" />
+    <Content Include="Template\css\bootstrap-rtl.min.css" />
+    <Content Include="Template\css\bootstrap.css" />
+    <Content Include="Template\css\bootstrap.min.css" />
+    <Content Include="Template\css\font-awesome.min.css" />
+    <Content Include="Template\css\jquery.bxslider.css" />
+    <Content Include="Template\css\kendo\Bootstrap\editor.png" />
+    <Content Include="Template\css\kendo\Bootstrap\imagebrowser.png" />
+    <Content Include="Template\css\kendo\Bootstrap\indeterminate.gif" />
+    <Content Include="Template\css\kendo\Bootstrap\loading-image.gif" />
+    <Content Include="Template\css\kendo\Bootstrap\loading.gif" />
+    <Content Include="Template\css\kendo\Bootstrap\loading_2x.gif" />
+    <Content Include="Template\css\kendo\Bootstrap\markers.png" />
+    <Content Include="Template\css\kendo\Bootstrap\markers_2x.png" />
+    <Content Include="Template\css\kendo\Bootstrap\slider-h.gif" />
+    <Content Include="Template\css\kendo\Bootstrap\slider-v.gif" />
+    <Content Include="Template\css\kendo\Bootstrap\sprite.png" />
+    <Content Include="Template\css\kendo\Bootstrap\sprite_2x.png" />
+    <Content Include="Template\css\kendo\Bootstrap\sprite_kpi.png" />
+    <Content Include="Template\css\kendo\Bootstrap\sprite_kpi_2x.png" />
+    <Content Include="Template\css\kendo\fonts\DejaVu\LICENSE.txt" />
+    <Content Include="Template\css\kendo\fonts\glyphs\KendoUIGlyphs.svg" />
+    <Content Include="Template\css\kendo\fonts\glyphs\WebComponentsIcons.svg" />
+    <Content Include="Template\css\kendo\images\back.png" />
+    <Content Include="Template\css\kendo\images\kendoui.svg" />
+    <Content Include="Template\css\kendo\images\wp8_icons.png" />
+    <Content Include="Template\css\kendo\images\wp8_inverseicons.png" />
+    <Content Include="Template\css\kendo\kendo.bootstrap.min.css" />
+    <Content Include="Template\css\kendo\kendo.common-bootstrap.min.css" />
+    <Content Include="Template\css\kendo\kendo.rtl.min.css" />
+    <Content Include="Template\css\owl.carousel.min.css" />
+    <Content Include="Template\css\owl.theme.default.min.css" />
+    <Content Include="Template\css\Site.css" />
+    <Content Include="Template\css\style-rtl2.css" />
+    <Content Include="Template\css\style2.css" />
+    <Content Include="Template\images\about-1-510x268.jpg" />
+    <Content Include="Template\images\about-2-446x608.jpg" />
+    <Content Include="Template\images\AmrWagih.jpeg" />
+    <Content Include="Template\images\AmrWagih_Face.jpeg" />
+    <Content Include="Template\images\ava-man.jpg" />
+    <Content Include="Template\images\ava-woman.jpg" />
+    <Content Include="Template\images\bg-blog.jpg" />
+    <Content Include="Template\images\bg-image-1.jpg" />
+    <Content Include="Template\images\bg-image-12.jpg" />
+    <Content Include="Template\images\bg-image-3.jpg" />
+    <Content Include="Template\images\bg-image-4.jpg" />
+    <Content Include="Template\images\bg-image-6.jpg" />
+    <Content Include="Template\images\bg-image-9.jpg" />
+    <Content Include="Template\images\clients-1.png" />
+    <Content Include="Template\images\clients-10.png" />
+    <Content Include="Template\images\clients-11.png" />
+    <Content Include="Template\images\clients-12.png" />
+    <Content Include="Template\images\clients-13.png" />
+    <Content Include="Template\images\clients-14.png" />
+    <Content Include="Template\images\clients-15.png" />
+    <Content Include="Template\images\clients-16.png" />
+    <Content Include="Template\images\clients-17.png" />
+    <Content Include="Template\images\clients-18.png" />
+    <Content Include="Template\images\clients-19.png" />
+    <Content Include="Template\images\clients-2.png" />
+    <Content Include="Template\images\clients-20.png" />
+    <Content Include="Template\images\clients-21.png" />
+    <Content Include="Template\images\clients-22.png" />
+    <Content Include="Template\images\clients-23.png" />
+    <Content Include="Template\images\clients-3.png" />
+    <Content Include="Template\images\clients-4.png" />
+    <Content Include="Template\images\clients-5.png" />
+    <Content Include="Template\images\clients-6.png" />
+    <Content Include="Template\images\clients-7.png" />
+    <Content Include="Template\images\clients-8.png" />
+    <Content Include="Template\images\clients-9.png" />
+    <Content Include="Template\images\clients-parallax-1.jpg" />
+    <Content Include="Template\images\clients-testimonials-1-68x68.jpg" />
+    <Content Include="Template\images\clients-testimonials-11-113x113.jpg" />
+    <Content Include="Template\images\clients-testimonials-2-68x68.jpg" />
+    <Content Include="Template\images\clients-testimonials-9-68x68.jpg" />
+    <Content Include="Template\images\eg.jpg" />
+    <Content Include="Template\images\favicon.ico" />
+    <Content Include="Template\images\home-1-268x182.jpg" />
+    <Content Include="Template\images\home-2-268x182.jpg" />
+    <Content Include="Template\images\home-3-268x182.jpg" />
+    <Content Include="Template\images\home-4-268x182.jpg" />
+    <Content Include="Template\images\home-slider-1-slide-1.jpg" />
+    <Content Include="Template\images\home-slider-1-slide-2.jpg" />
+    <Content Include="Template\images\home-slider-1-slide-3.jpg" />
+    <Content Include="Template\images\loading.gif" />
+    <Content Include="Template\images\logo-230x49.png" />
+    <Content Include="Template\images\logo-inverse-230x49.png" />
+    <Content Include="Template\images\logo-new.png" />
+    <Content Include="Template\images\MahmoudAnsary.jpeg" />
+    <Content Include="Template\images\novi-icon-26x26 %281%29.png" />
+    <Content Include="Template\images\novi-icon-26x26.png" />
+    <Content Include="Template\images\post-preview-1-70x70 %281%29.jpg" />
+    <Content Include="Template\images\post-preview-1-70x70.jpg" />
+    <Content Include="Template\images\post-preview-2-70x70 %281%29.jpg" />
+    <Content Include="Template\images\post-preview-2-70x70.jpg" />
+    <Content Include="Template\images\RawanOsama.jpeg" />
+    <Content Include="Template\images\services-1-461x514.jpg" />
+    <Content Include="Template\images\services-6-370x220.jpg" />
+    <Content Include="Template\images\services-7-370x220.jpg" />
+    <Content Include="Template\images\services-8-370x220.jpg" />
+    <Content Include="Template\images\team-1-189x189.jpg" />
+    <Content Include="Template\images\team-10-246x300.jpg" />
+    <Content Include="Template\images\team-11-246x300.jpg" />
+    <Content Include="Template\images\team-12-246x300.jpg" />
+    <Content Include="Template\images\team-2-189x189.jpg" />
+    <Content Include="Template\images\team-3-189x189.jpg" />
+    <Content Include="Template\images\team-4-189x189.jpg" />
+    <Content Include="Template\images\team-9-246x300.jpg" />
+    <Content Include="Template\images\us.jpg" />
+    <Content Include="Template\img\agrinetworkusers\default.png" />
+    <Content Include="Template\img\banner\default.png" />
+    <Content Include="Template\img\course\default.png" />
+    <Content Include="Template\img\gallery\default.png" />
+    <Content Include="Template\img\news\default.png" />
+    <Content Include="Template\img\training\default.png" />
+    <Content Include="Template\js\bootstrap.min.js" />
+    <Content Include="Template\js\core.min.js" />
+    <Content Include="Template\js\custom.js" />
+    <Content Include="Template\js\jquery.bxslider.min.js" />
+    <Content Include="Template\js\jquery.easing.min.js" />
+    <Content Include="Template\js\jquery.min.js" />
+    <Content Include="Template\js\kendo\jszip.min.js" />
+    <Content Include="Template\js\kendo\kendo.all.min.js" />
+    <Content Include="Template\js\kendo\kendo.aspnetmvc.min.js" />
+    <Content Include="Template\js\kendo\pdf.js" />
+    <Content Include="Template\js\kendo\pdf.worker.js" />
+    <Content Include="Template\js\owl.carousel.min.js" />
+    <Content Include="Template\js\script2.js" />
+    <Content Include="Template\js\wow.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Template\img\course\approval\" />
+    <Folder Include="Template\img\cv\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\Error.cshtml" />
+    <Content Include="Areas\Admin\Views\Base\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\CourseTypes\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\CourseTypes\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\CourseTypes\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\CourseTypes\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\CourseTypes\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TrainingTypes\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\TrainingTypes\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\TrainingTypes\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\TrainingTypes\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\TrainingTypes\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Courses\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Courses\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Courses\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Courses\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Courses\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Trainings\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Trainings\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Trainings\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Trainings\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Trainings\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\RegisterUsers\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Galleries\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Galleries\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Galleries\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Galleries\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Galleries\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Blogs\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Blogs\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Blogs\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Blogs\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Blogs\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Banners\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Banners\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Banners\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Banners\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Banners\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Jobs\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Jobs\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Jobs\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Jobs\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Jobs\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\JobUsers\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\SystemUsers\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\SystemUsers\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\SystemUsers\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\SystemUsers\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\SystemUsers\Index.cshtml" />
+    <Content Include="Files\AgricultureNetwork\1.pdf" />
+    <Content Include="Areas\Admin\Views\CourseApprovals\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\CourseApprovals\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\CourseApprovals\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\CourseApprovals\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\CourseApprovals\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\RegisterUsers\Delete.cshtml" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Template\fonts\fl-bigmug-line.woff" />
+    <Content Include="Template\fonts\fl-flat-icons-set-2.woff" />
+    <Content Include="Template\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Template\fonts\MaterialIcons-Regular.woff2" />
+    <Content Include="Template\fonts\Mercury-Regular.woff" />
+    <Content Include="Views\Home\Services.cshtml" />
+    <Content Include="Views\Home\ComingSoon.cshtml" />
+    <None Include="Properties\PublishProfiles\2.pubxml" />
+    <None Include="Properties\PublishProfiles\local.pubxml" />
+    <Content Include="Views\Home\TrainingTypeDetails.cshtml" />
+    <Content Include="Views\Home\CourseTypeDetails.cshtml" />
+    <Content Include="Views\Home\CourseDetails.cshtml" />
+    <Content Include="Views\Home\TrainingDetails.cshtml" />
+    <Content Include="Views\Home\RegisterUser.cshtml" />
+    <Content Include="Views\Home\GalleryCourses.cshtml" />
+    <Content Include="Views\Home\GallerySeminars.cshtml" />
+    <Content Include="Views\Home\GalleryEvents.cshtml" />
+    <Content Include="Views\Home\GalleryDetails.cshtml" />
+    <Content Include="Template\fonts\lg.woff" />
+    <Content Include="Views\Home\BlogDetails.cshtml" />
+    <Content Include="Views\Home\Careers.cshtml" />
+    <Content Include="Views\Home\CareerDetails.cshtml" />
+    <Content Include="Views\Home\ApplyToCareer.cshtml" />
+    <Content Include="Views\_Account\Login.cshtml" />
+    <Content Include="Views\Home\AgricultureNetworkSheet1.cshtml" />
+    <Content Include="Template\css\kendo\fonts\DejaVu\DejaVuSans-Bold.ttf" />
+    <Content Include="Template\css\kendo\fonts\DejaVu\DejaVuSans-BoldOblique.ttf" />
+    <Content Include="Template\css\kendo\fonts\DejaVu\DejaVuSans-ExtraLight.ttf" />
+    <Content Include="Template\css\kendo\fonts\DejaVu\DejaVuSans-Oblique.ttf" />
+    <Content Include="Template\css\kendo\fonts\DejaVu\DejaVuSans.ttf" />
+    <Content Include="Template\css\kendo\fonts\DejaVu\DejaVuSansMono-Bold.ttf" />
+    <Content Include="Template\css\kendo\fonts\DejaVu\DejaVuSansMono-BoldOblique.ttf" />
+    <Content Include="Template\css\kendo\fonts\DejaVu\DejaVuSansMono-Oblique.ttf" />
+    <Content Include="Template\css\kendo\fonts\DejaVu\DejaVuSansMono.ttf" />
+    <Content Include="Template\css\kendo\fonts\DejaVu\DejaVuSerif-Bold.ttf" />
+    <Content Include="Template\css\kendo\fonts\DejaVu\DejaVuSerif-BoldItalic.ttf" />
+    <Content Include="Template\css\kendo\fonts\DejaVu\DejaVuSerif-Italic.ttf" />
+    <Content Include="Template\css\kendo\fonts\DejaVu\DejaVuSerif.ttf" />
+    <Content Include="Template\css\kendo\fonts\glyphs\KendoUIGlyphs.eot" />
+    <Content Include="Template\css\kendo\fonts\glyphs\KendoUIGlyphs.ttf" />
+    <Content Include="Template\css\kendo\fonts\glyphs\KendoUIGlyphs.woff" />
+    <Content Include="Template\css\kendo\fonts\glyphs\WebComponentsIcons.eot" />
+    <Content Include="Template\css\kendo\fonts\glyphs\WebComponentsIcons.ttf" />
+    <Content Include="Template\css\kendo\fonts\glyphs\WebComponentsIcons.woff" />
+    <Content Include="Template\css\kendo\images\kendoui.ttf" />
+    <Content Include="Template\css\kendo\images\kendoui.woff" />
+    <Content Include="Views\_Account\Profile.cshtml" />
+    <None Include="Properties\PublishProfiles\smgeg.com - Web Deploy.pubxml" />
+    <Content Include="Template\fonts\DROIDKUFI-REGULAR_0.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Resource.ar-EG.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource.ar-EG.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\Resource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202208192117332_init.resx">
+      <DependentUpon>202208192117332_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208200658284_init1.resx">
+      <DependentUpon>202208200658284_init1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208200735101_setcourcer.resx">
+      <DependentUpon>202208200735101_setcourcer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208200921048_setcourcerصي.resx">
+      <DependentUpon>202208200921048_setcourcerصي.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208200942370_setcourcerصي1.resx">
+      <DependentUpon>202208200942370_setcourcerصي1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208201027230_setcour.resx">
+      <DependentUpon>202208201027230_setcour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208201219592_setcour1.resx">
+      <DependentUpon>202208201219592_setcour1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208201509575_setcour2.resx">
+      <DependentUpon>202208201509575_setcour2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208211944086_setcoursd.resx">
+      <DependentUpon>202208211944086_setcoursd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208221640438_setcoursdjh.resx">
+      <DependentUpon>202208221640438_setcoursdjh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208221732255_setcoursdjhlk.resx">
+      <DependentUpon>202208221732255_setcoursdjhlk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208271534403_asdlkjklfdxdf.resx">
+      <DependentUpon>202208271534403_asdlkjklfdxdf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208271610256_asdlkjklfdxdfjh.resx">
+      <DependentUpon>202208271610256_asdlkjklfdxdfjh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208272006588_asdlkjklfdxdfj]khhgh.resx">
+      <DependentUpon>202208272006588_asdlkjklfdxdfj]khhgh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209150958198_jobs.resx">
+      <DependentUpon>202209150958198_jobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209151047237_jobsshort.resx">
+      <DependentUpon>202209151047237_jobsshort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209171220426_jobsusers.resx">
+      <DependentUpon>202209171220426_jobsusers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209171302195_jobsuserssd.resx">
+      <DependentUpon>202209171302195_jobsuserssd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210031907046_sdasdf.resx">
+      <DependentUpon>202210031907046_sdasdf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210031917089_sdasd45.resx">
+      <DependentUpon>202210031917089_sdasd45.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210031941388_sdasd88.resx">
+      <DependentUpon>202210031941388_sdasd88.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210032006376_sdasdoo5.resx">
+      <DependentUpon>202210032006376_sdasdoo5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210282025265_addcoursecode3.resx">
+      <DependentUpon>202210282025265_addcoursecode3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210282045203_addcoursecodeas.resx">
+      <DependentUpon>202210282045203_addcoursecodeas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211031532296_addjobexpiry.resx">
+      <DependentUpon>202211031532296_addjobexpiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211031537465_addjobexpiry2.resx">
+      <DependentUpon>202211031537465_addjobexpiry2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212241040143_addisenabled.resx">
+      <DependentUpon>202212241040143_addisenabled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301210651318_courseapproval.resx">
+      <DependentUpon>202301210651318_courseapproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301210700167_courseapproval1.resx">
+      <DependentUpon>202301210700167_courseapproval1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301241501046_addlogoToApprov.resx">
+      <DependentUpon>202301241501046_addlogoToApprov.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302020925560_adduserCourse.resx">
+      <DependentUpon>202302020925560_adduserCourse.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59474</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/SMGWebsite</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\Api_HR\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\Api_HR\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\..\Api_HR\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\Api_HR\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\..\Api_HR\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\Api_HR\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets'))" />
+  </Target>
+  <Import Project="..\..\Api_HR\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\..\Api_HR\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\..\Api_HR\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\..\Api_HR\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

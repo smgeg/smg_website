@@ -1,0 +1,71 @@
+﻿@model Website.Models.AgricultureNetworkUser
+@{
+    ViewBag.Title = "Agriculture Network Course";
+    Layout = null;
+}
+
+<head>
+
+    <link rel='stylesheet' href='~/template/css/kendo/kendo.rtl.min.css' />
+
+    <link href="~/template/css/kendo/kendo.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/template/css/kendo/kendo.common-bootstrap.min.css" rel="stylesheet" />
+
+    <script src="~/Template/js/core.min.js"></script>
+    <script src="~/template/js/kendo/kendo.all.min.js"></script>
+    <script src="~/template/js/kendo/kendo.aspnetmvc.min.js"></script>
+    <script src="~/template/js/kendo/jszip.min.js"></script>
+    <script src="~/Template/js/kendo/pdf.js"></script>
+    <script src="~/Template/js/kendo/pdf.worker.js"></script>
+
+</head>
+
+
+
+
+<h2>Welcome , @Model.NameEn</h2>
+
+
+<div class="row">
+    <div class="col-md-8">
+        <section id="loginForm">
+            <div id="example">
+               @(Html.Kendo().PDFViewer().Name("pdfviewer")
+          .PdfjsProcessing(pdf => pdf.File(Url.Content("~/Files/AgricultureNetwork/1.pdf")))
+          //.Height(1200)
+          //.HtmlAttributes(new { height = "100px"})
+            )
+            </div>
+        </section>
+    </div>
+</div>
+
+
+<style>
+    html body #pdfviewer {
+        width: 100% !important;
+        height:90% !important;
+    }
+    
+    html body #pdfviewer .k-toggle-selection-group.k-button-group {
+        display:none;
+    }
+    
+    html body #pdfviewer [data-command="OpenSearchCommand"] {
+        visibility:hidden;
+    }
+
+    html body #pdfviewer [data-command="OpenCommand"] {
+        visibility:hidden;
+    }
+
+    html body #pdfviewer [data-command="DownloadCommand"] {
+        visibility:hidden;
+    }
+    
+    html body #pdfviewer [data-command="PrintCommand"] {
+        visibility:hidden;
+    }
+</style>
+
+

@@ -1,0 +1,91 @@
+﻿@model Website.Models.Course
+@{
+    ViewBag.Title = "الكورسات";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h3>هل انت متأكد من الحذف?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseTypeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseTypeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameAr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameAr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameEn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameEn)
+        </dd>
+
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HourlyDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HourlyDuration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LecturesCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LecturesCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-default" /> |
+            @Html.ActionLink("عودة الى الكورسات", "Index")
+        </div>
+    }
+</div>

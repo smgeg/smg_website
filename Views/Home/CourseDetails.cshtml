@@ -1,0 +1,217 @@
+﻿@using Website.Utility
+@model Website.Models.Course
+
+@{
+    ViewBag.Title = Utilities.IsArabic ? Model.NameAr : Model.NameEn;
+}
+
+
+<section class="section-60 section-md-75 section-xl-50 novi-background bg-whisperapprox bg-default">
+    <div class="container">
+        <div class="row row-50 row-fix">
+            <div class="col-lg-8 col-xl-9">
+                <article class="post post-single">
+
+                    <div class="post-header">
+                        <h4 style="color: #ab232d">@(Utilities.IsArabic ? Model.NameAr : Model.NameEn)</h4>
+                    </div>
+                    <div class="post-meta">
+                        <ul class="list-bordered-horizontal">
+
+                            <li>
+                                <dl class="list-terms-inline">
+                                    <dt>@Resource.Price</dt>
+                                    <dd>@Model.Price.ToString("N0")</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl class="list-terms-inline">
+                                    <dt>@Resource.Lectures</dt>
+                                    <dd>@Model.LecturesCount</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl class="list-terms-inline">
+                                    <dt>@Resource.Location</dt>
+                                    <dd>@Model.Location</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl class="list-terms-inline">
+                                    <dt>@Resource.Hours</dt>
+                                    <dd>@Model.HourlyDuration</dd>
+                                </dl>
+                            </li>
+                            @if (Model.CourseDate.HasValue)
+                            {
+                                <li>
+                                    <dl class="list-terms-inline">
+                                        <dt>@Resource.Date</dt>
+                                        <dd>
+                                            <time datetime="2018-01-22">@Model.CourseDate.Value.ToString("dd/MM/yyyy")</time>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="divider-fullwidth bg-gray-light"></div>
+                    <div class="post-body">
+
+                        <h4 style="color: #ab232d">@Html.DisplayNameFor(model => model.DescriptionAr).ToHtmlString().Replace("العربى", "")</h4>
+
+                        <p>@(Utilities.IsArabic ? Model.DescriptionAr : Model.DescriptionEn)</p>
+                    </div>
+                    @if (Utilities.IsArabic)
+                    {
+                        if (!string.IsNullOrEmpty(Model.DetailsAr))
+                        {
+                            <div class="divider-fullwidth bg-gray-light"></div>
+                            <div class="post-body">
+
+                                <h4 style="color: #ab232d">@Html.DisplayNameFor(model => model.DetailsAr).ToHtmlString().Replace("العربى", "")</h4>
+
+                                <p>@(new HtmlString(Model.DetailsAr))</p>
+                            </div>
+                        }
+                        if (!string.IsNullOrEmpty(Model.TargetAr))
+                        {
+                            <div class="divider-fullwidth bg-gray-light"></div>
+                            <div class="post-body">
+
+                                <h4 style="color: #ab232d">@Html.DisplayNameFor(model => model.TargetAr).ToHtmlString().Replace("العربى", "")</h4>
+
+                                <p>@(new HtmlString(Model.TargetAr))</p>
+                            </div>
+                        }
+                        if (!string.IsNullOrEmpty(Model.ContentDetailsAr))
+                        {
+                            <div class="divider-fullwidth bg-gray-light"></div>
+                            <div class="post-body">
+
+                                <h4 style="color: #ab232d">@Html.DisplayNameFor(model => model.ContentDetailsAr).ToHtmlString().Replace("العربى", "")</h4>
+
+                                <p>@(new HtmlString(Model.ContentDetailsAr))</p>
+                            </div>
+                        }
+                        if (!string.IsNullOrEmpty(Model.CoursePersonsAr))
+                        {
+                            <div class="divider-fullwidth bg-gray-light"></div>
+                            <div class="post-body">
+
+                                <h4 style="color: #ab232d">@Html.DisplayNameFor(model => model.CoursePersonsAr).ToHtmlString().Replace("العربى", "")</h4>
+
+                                <p>@(new HtmlString(Model.CoursePersonsAr))</p>
+                            </div>
+                        }
+                        if (!string.IsNullOrEmpty(Model.CoursePersonsAr))
+                        {
+                            <div class="divider-fullwidth bg-gray-light"></div>
+                            <div class="post-body">
+
+                                <h4 style="color: #ab232d">@Html.DisplayNameFor(model => model.CoursePersonsAr).ToHtmlString().Replace("العربى", "")</h4>
+
+                                <p>@(new HtmlString(Model.CoursePersonsAr))</p>
+                            </div>
+                        }
+
+
+                    }
+                    else
+                    {
+                        if (!string.IsNullOrEmpty(Model.DetailsEn))
+                        {
+                            <div class="divider-fullwidth bg-gray-light"></div>
+                            <div class="post-body">
+
+                                <h4 style="color: #ab232d">@Html.DisplayNameFor(model => model.DetailsEn).ToHtmlString().Replace("الانجليزى", "")</h4>
+
+                                <p>@(new HtmlString(Model.DetailsEn))</p>
+                            </div>
+                        }
+                        if (!string.IsNullOrEmpty(Model.TargetEn))
+                        {
+                            <div class="divider-fullwidth bg-gray-light"></div>
+                            <div class="post-body">
+
+                                <h4 style="color: #ab232d">@Html.DisplayNameFor(model => model.TargetEn).ToHtmlString().Replace("الانجليزى", "")</h4>
+
+                                <p>@(new HtmlString(Model.TargetEn))</p>
+                            </div>
+                        }
+                        if (!string.IsNullOrEmpty(Model.ContentDetailsEn))
+                        {
+                            <div class="divider-fullwidth bg-gray-light"></div>
+                            <div class="post-body">
+
+                                <h4 style="color: #ab232d">@Html.DisplayNameFor(model => model.ContentDetailsEn).ToHtmlString().Replace("الانجليزى", "")</h4>
+
+                                <p>@(new HtmlString(Model.ContentDetailsEn))</p>
+                            </div>
+                        }
+                        if (!string.IsNullOrEmpty(Model.CoursePersonsEn))
+                        {
+                            <div class="divider-fullwidth bg-gray-light"></div>
+                            <div class="post-body">
+
+                                <h4 style="color: #ab232d">@Html.DisplayNameFor(model => model.CoursePersonsEn).ToHtmlString().Replace("الانجليزى", "")</h4>
+
+                                <p>@(new HtmlString(Model.CoursePersonsEn))</p>
+                            </div>
+                        }
+                    }
+
+                    
+
+                </article>
+            </div>
+            <div class="col-lg-4 col-xl-3">
+                <div class="blog-aside">
+                    <div class="blog-aside-item">
+                        <div class="post-image">
+                            <img src="~/Template/img/course/@Model.Image" alt="" width="230" height="200">
+                        </div>
+                        <a class="button button-primary button-block" href="@Url.Action("RegisterUser" , "Home" , new { id = Model.Id , type = "c"})">@Resource.RegisterNow</a>
+                    </div>
+                </div>
+                
+
+                <div class="blog-aside pt-5">
+                    <div class="blog-aside-item">
+                        @if (Model.courseApprovalsWithImage.Any())
+                        {
+                            <div class="post-body pr-5">
+
+                                <h5 style="color: #ab232d" class="pb-3">@Resource.ThisCourseApprovedBy</h5>
+                                <ul style="list-style: auto;">
+                                    @foreach (var item in Model.courseApprovalsWithImage)
+                                    {
+                                        <li>
+                                            <div class="unit flex-row unit-spacing-sm align-items-center">
+
+                                                <div class="unit-body">
+                                                    <cite class="text-black">@(Website.Utility.Utilities.IsArabic ?  item.NameAr : item.NameEn).</cite>
+                                                </div>
+                                                <div class="unit-left">
+                                                    @if (!string.IsNullOrEmpty(item.Image))
+                                                    {
+                                                        <img class="img-circle" style="width:50px;height:50px" src="@(Url.Content("~/Template/img/course/approval/" + item.Image))" width="68" height="68" alt="">
+                                                    }
+                                                </div>
+                                            </div>
+                                        </li>
+                                    }
+                                </ul>
+
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+

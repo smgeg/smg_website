@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "Register user";
+}
+
+<section class="section-35 section-md-75 section-xl-100 bg-whisperapprox novi-background bg-cover">
+    <div class="container">
+        <div class="row row-60">
+            <div class="col-lg-9 col-xl-7">
+
+                @if (ViewBag.success != null)
+                {
+                    <h4>@Resource.Thanks , <span><h3>@ViewBag.name</h3></span>@Resource.ForRegisteration</h4>
+                    <h5>@Resource.WeWillContactasap</h5>
+                }
+                else
+                {
+                    <h4>@Resource.RegisterFor @ViewBag.name</h4>
+                    <form method="post" action="@Url.Action("RegisterUser" , "Home")" novalidate="novalidate" id="formSend">
+                        @Html.Hidden("type", (string)ViewBag.type)@Html.Hidden("id", (string)ViewBag.id.ToString())
+                        @Html.AntiForgeryToken()
+                        <div class="row row-30">
+                            <div class="col-md-6">
+                                <div class="form-wrap has-error">
+                                    <input class="form-input form-control-has-validation" id="feedback-3-first-name" type="text" name="name" data-constraints="@@Required"><span class="form-validation"></span>
+                                    <label class="form-label rd-input-label" for="feedback-3-first-name">@Resource.Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-wrap has-error">
+                                    <input class="form-input form-control-has-validation" id="feedback-3-last-name" type="text" name="country" data-constraints="@@Required"><span class="form-validation"></span>
+                                    <label class="form-label rd-input-label" for="feedback-3-last-name">@Resource.Country</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-wrap has-error">
+                                    <input class="form-input form-control-has-validation" id="feedback-3-email" type="email" name="email" data-constraints="@@Email @@Required"><span class="form-validation"></span>
+                                    <label class="form-label rd-input-label" for="feedback-3-email">@Resource.Email</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-wrap has-error">
+                                    <input class="form-input form-control-has-validation" id="feedback-3-phone" type="text" name="mobile" data-constraints="@@Numeric @@Required"><span class="form-validation"></span>
+                                    <label class="form-label rd-input-label" for="feedback-3-phone">@Resource.Mobile</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-wrap has-error">
+                                    <input class="form-input form-control-has-validation" id="feedback-3-WhatasppMobile" type="text" name="WhatasppMobile" data-constraints="@@Numeric @@Required"><span class="form-validation"></span>
+                                    <label class="form-label rd-input-label" for="feedback-3-WhatasppMobile">@Resource.WhatsappMobile</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-wrap has-error">
+                                    <input class="form-input form-control-has-validation" id="feedback-3-position" type="text" name="position" data-constraints="@@Required"><span class="form-validation"></span>
+                                    <label class="form-label rd-input-label" for="feedback-3-position">@Resource.Position</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row row-offset-5">
+                            <div class="col-md-6">
+                                <input class="button button-primary button-block submitBtn" type="submit" value="@Resource.Register" />
+                            </div>
+                        </div>
+                    </form>
+                }
+                @section scripts {
+                    <script>
+                        $(document).ready(function () {
+                            $("#formSend").submit(function () {
+                                $(".submitBtn").attr("disabled", true);
+                                return true;
+                            });
+                        });
+                    </script>
+                }
+            </div>
+        </div>
+    </div>
+</section>

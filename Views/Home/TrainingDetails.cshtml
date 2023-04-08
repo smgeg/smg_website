@@ -1,0 +1,170 @@
+﻿@using Website.Utility
+@model Website.Models.Training
+
+@{
+    ViewBag.Title = Utilities.IsArabic ? Model.NameAr : Model.NameEn;
+}
+
+
+<section class="section-60 section-md-75 section-xl-50 novi-background bg-whisperapprox bg-default">
+    <div class="container">
+        <div class="row row-50 row-fix">
+            <div class="col-lg-8 col-xl-9">
+                <article class="post post-single">
+
+                    <div class="post-header">
+                        <h4>@(Utilities.IsArabic ? Model.NameAr : Model.NameEn)</h4>
+                    </div>
+                    <div class="post-meta">
+                        <ul class="list-bordered-horizontal">
+
+                            <li>
+                                <dl class="list-terms-inline">
+                                    <dt>Price</dt>
+                                    <dd>@Model.Price.ToString("N0")</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl class="list-terms-inline">
+                                    <dt>Lectures</dt>
+                                    <dd>@Model.LecturesCount</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl class="list-terms-inline">
+                                    <dt>Location</dt>
+                                    <dd>@Model.Location</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl class="list-terms-inline">
+                                    <dt>Hours</dt>
+                                    <dd>@Model.HourlyDuration</dd>
+                                </dl>
+                            </li>
+                            @if (Model.TrainingDate.HasValue)
+                            {
+                                <li>
+                                    <dl class="list-terms-inline">
+                                        <dt>Date</dt>
+                                        <dd>
+                                            <time datetime="2018-01-22">@Model.TrainingDate.Value.ToString("dd/MM/yyyy")</time>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="divider-fullwidth bg-gray-light"></div>
+                    <div class="post-body">
+
+                        <h4>Description</h4>
+
+                        <p>@(Utilities.IsArabic ? Model.DescriptionAr : Model.DescriptionEn)</p>
+                    </div>
+                    @if (Utilities.IsArabic)
+                    {
+                        if (!string.IsNullOrEmpty(Model.DetailsAr))
+                        {
+                            <div class="divider-fullwidth bg-gray-light"></div>
+                            <div class="post-body">
+
+                                <h4>Details</h4>
+
+                                <p>@(new HtmlString(Model.DetailsAr))</p>
+                            </div>
+                        }
+                        if (!string.IsNullOrEmpty(Model.TargetAr))
+                        {
+                            <div class="divider-fullwidth bg-gray-light"></div>
+                            <div class="post-body">
+
+                                <h4>Target</h4>
+
+                                <p>@(new HtmlString(Model.TargetAr))</p>
+                            </div>
+                        }
+                        if (!string.IsNullOrEmpty(Model.ContentDetailsAr))
+                        {
+                            <div class="divider-fullwidth bg-gray-light"></div>
+                            <div class="post-body">
+
+                                <h4>Content</h4>
+
+                                <p>@(new HtmlString(Model.ContentDetailsAr))</p>
+                            </div>
+                        }
+                        if (!string.IsNullOrEmpty(Model.CoursePersonsAr))
+                        {
+                            <div class="divider-fullwidth bg-gray-light"></div>
+                            <div class="post-body">
+
+                                <h4>Beneficiaries</h4>
+
+                                <p>@(new HtmlString(Model.CoursePersonsAr))</p>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        if (!string.IsNullOrEmpty(Model.DetailsEn))
+                        {
+                            <div class="divider-fullwidth bg-gray-light"></div>
+                            <div class="post-body">
+
+                                <h4>Details</h4>
+
+                                <p>@(new HtmlString(Model.DetailsEn))</p>
+                            </div>
+                        }
+                        if (!string.IsNullOrEmpty(Model.TargetEn))
+                        {
+                            <div class="divider-fullwidth bg-gray-light"></div>
+                            <div class="post-body">
+
+                                <h4>Target</h4>
+
+                                <p>@(new HtmlString(Model.TargetEn))</p>
+                            </div>
+                        }
+                        if (!string.IsNullOrEmpty(Model.ContentDetailsEn))
+                        {
+                            <div class="divider-fullwidth bg-gray-light"></div>
+                            <div class="post-body">
+
+                                <h4>Content</h4>
+
+                                <p>@(new HtmlString(Model.ContentDetailsEn))</p>
+                            </div>
+                        }
+                        if (!string.IsNullOrEmpty(Model.CoursePersonsEn))
+                        {
+                            <div class="divider-fullwidth bg-gray-light"></div>
+                            <div class="post-body">
+
+                                <h4>Beneficiaries</h4>
+
+                                <p>@(new HtmlString(Model.CoursePersonsEn))</p>
+                            </div>
+                        }
+                    }
+
+                </article>
+            </div>
+            <div class="col-lg-4 col-xl-3">
+                <div class="blog-aside">
+                    <div class="blog-aside-item">
+                        <div class="post-image">
+                            <img src="~/Template/img/training/@Model.Image" alt="" width="230" height="200">
+                        </div>
+                        <a class="button button-primary button-block" href="@Url.Action("RegisterUser" , "Home" , new { id = Model.Id , type = "t"})">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+

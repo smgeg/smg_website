@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = Resource.L_Menu_ContactUs;
+}
+
+<section class="section-40 section-md-60 section-lg-90 section-xl-120 bg-gray-dark page-title-wrap overlay-5 custom-bg-image" style="background-image: url(@Url.Content("~/Template/images/bg-image-4.jpg"));">
+    <div class="container">
+        <div class="page-title text-center">
+            <h2>@Resource.L_Menu_ContactUs</h2>
+        </div>
+    </div>
+</section>
+
+<section class="section-60 section-md-top-90 section-md-bottom-100 novi-background bg-cover">
+    <div class="container">
+        <div class="row row-50 row-fix justify-content-lg-between">
+            <div class="col-lg-5 col-xl-4">
+                <div class="inset-lg-right-15 inset-xl-right-0">
+                    <div class="row row-30 row-md-40">
+                        <div class="col-md-10 col-lg-12">
+                            <h3>@Resource.HowToFindUs</h3>
+                            <p>@Resource.HowToFindUs_Desc</p>
+                        </div>
+                        <div class="col-md-6 col-lg-12">
+                            <h5>@Resource.Headquarters</h5>
+                            <address class="contact-info">
+                                <p class="text-uppercase">@Resource.L_Address</p>
+                                <dl class="list-terms-inline">
+                                    <dt>@Resource.Telephone</dt>
+                                    <dd><a class="link-secondary" href="tel:0201050994180" dir="ltr">+20 (105) 099–4180</a></dd>
+                                </dl>
+                                <dl class="list-terms-inline">
+                                    <dt>@Resource.Email</dt>
+                                    <dd><a class="link-primary" href="mailto:info@smgeg.com">info@smgeg.com</a></dd>
+                                </dl>
+                            </address>
+                        </div>
+                        <div class="col-md-6 col-lg-12">
+                            <h5>@Resource.Socialmedia</h5>
+                                <div class="group-sm group-middle">
+                                    <ul class="list-inline list-inline-reset">
+                                        <li><a class="novi-icon icon icon-round icon-pciked-bluewood icon-xxs-smallest fa fa-facebook" href="https://www.facebook.com/SMGforconsulting"></a></li>
+                                        <li><a class="novi-icon icon icon-round icon-pciked-bluewood icon-xxs-smallest fa fa-linkedin" href="https://www.linkedin.com/company/smg-eg/"></a></li>
+                                        <li><a class="novi-icon icon icon-round icon-pciked-bluewood icon-xxs-smallest fa fa-instagram" href="https://www.instagram.com/smgegconsulting/"></a></li>
+                                        <li><a class="novi-icon icon icon-round icon-pciked-bluewood icon-xxs-smallest fa fa-send" href="https://t.me/+201050994180"></a></li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-xl-6">
+                <h3>@Resource.GetInTouch</h3>
+                <form class="rd-mailform form-modern" data-form-output="form-output-global" data-form-type="contact" method="post" action="@Url.Action("SendMailToAdmin")" novalidate="novalidate">
+                    <div class="row row-fix row-30">
+                        <div class="col-md-6">
+                            <div class="form-wrap">
+                                <input class="form-input form-control-has-validation" id="contact-name" type="text" name="name" data-constraints="@@Required"><span class="form-validation"></span>
+                                <label class="form-label rd-input-label" for="contact-name">@Resource.Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-wrap">
+                                <input class="form-input form-control-has-validation" id="contact-email" type="email" name="email" data-constraints="@@Email @@Required"><span class="form-validation"></span>
+                                <label class="form-label rd-input-label" for="contact-email">@Resource.Email</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-wrap">
+                                <div class="textarea-lined-wrap">
+                                    <textarea class="form-input form-control-has-validation" id="contact-message" name="message" data-constraints="@@Required"></textarea><span class="form-validation"></span>
+                                    <label class="form-label rd-input-label" for="contact-message">@Resource.Message</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-fix row-30 row-offset-5">
+                        <div class="col-sm-8">
+                            <button class="button button-primary button-block" type="submit">@Resource.Send </button>
+                        </div>
+                        <div class="col-sm-4">
+                            <button class="button button-silver-outline button-block" type="reset">@Resource.Reset</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+</section>
+
+<section class="section">
+    @*<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3421.501828741602!2d31.167541342087738!3d30.956475132803973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7bb95b139087d%3A0xf6dbdc1634b2759e!2z2LTYsdmD2Ycg2KfZhNmG2YLZitioINmE2YTYrtiv2YXYp9iqINin2YTYqNiq2LHZiNmE2YrZhw!5e0!3m2!1sen!2seg!4v1623852419307!5m2!1sen!2seg" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>*@
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2904.1691893120837!2d31.33648956803224!3d30.046649037742593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e8bd3bba157%3A0x1263ca18e2f1d290!2zMTcg2KXYqNix2KfZh9mK2YUg2KXYqNmGINin2YTZhdmH2K_ZitiMINin2YTYrdiv2YrZgtipINin2YTYr9mI2YTZitip2Iwg2YXYr9mK2YbYqSDZhti12LHYjCDZhdit2KfZgdi42Kkg2KfZhNmC2KfZh9ix2KnigKwgMTE3NjU!5e0!3m2!1sar!2seg!4v1647356986610!5m2!1sar!2seg" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    
+</section>
+

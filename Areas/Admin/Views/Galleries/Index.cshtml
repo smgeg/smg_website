@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Website.Models.Gallery>
+
+@{
+    ViewBag.Title = "معرض الصور";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("اضافة جديد", "Create")
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+      
+        <th>
+            @Html.DisplayNameFor(model => model.NameAr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameEn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescriptionAr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescriptionEn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationAr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationEn)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>*@
+        <td>
+            @item.Date.ToString("dd/MM/yyyy")
+        </td>
+      
+        <td>
+            @Html.DisplayFor(modelItem => item.NameAr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameEn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescriptionAr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescriptionEn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationAr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationEn)
+        </td>
+        <td>
+            @Html.ActionLink("تعديل", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("حذف", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

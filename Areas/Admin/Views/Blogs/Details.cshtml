@@ -1,0 +1,57 @@
+﻿@model Website.Models.Blog
+@{
+    ViewBag.Title = "الاخبار";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>Blog</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NameAr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameAr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameEn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameEn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescriptionAr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescriptionAr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescriptionEn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescriptionEn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

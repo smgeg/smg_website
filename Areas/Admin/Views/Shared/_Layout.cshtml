@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMG لوحة التحكم - @ViewBag.title </title>
+    @*@Styles.Render("~/Content/css")*@
+    <link rel="icon" href="~/logo.ico" type="image/x-icon">
+    <link href="~/template/css/Site.css" rel="stylesheet" />
+    <link href="~/template/css/bootstrap7-rtl.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/template/css/font-awesome.min.css">
+    <link rel='stylesheet' href='~/template/css/kendo/kendo.rtl.min.css' />
+
+    <link href="~/template/css/kendo/kendo.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/template/css/kendo/kendo.common-bootstrap.min.css" rel="stylesheet" />
+
+
+
+
+
+    @*@Scripts.Render("~/bundles/jquery")*@
+    <script src="~/template/js/jquery.min.js"></script>
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+
+    <script src="~/template/js/kendo/kendo.all.min.js"></script>
+    <script src="~/template/js/kendo/kendo.aspnetmvc.min.js"></script>
+    <script src="~/template/js/kendo/jszip.min.js"></script>
+
+    <script src="~/template/js/bootstrap.min.js"></script>
+
+    <script>
+        $(function () {
+            kendo.cultures.current.calendar.patterns.d = "dd-MM-yyyy";
+            kendo.cultures.current.calendar.patterns.G = "dd-MM-yyyy h:mm:ss tt";
+        });
+    </script>
+    @*@Scripts.Render("~/bundles/modernizr")*@
+</head>
+<body dir="rtl" class="k-rtl">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        @Html.ActionLink("لوحة التحكم", "Index","Base", new { area = "admin" }, new { @class = "navbar-brand" })
+                        
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">شاشات النظام<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink(" تعريف اقسام الدبلومات التدريبية  ", "Index", "TrainingTypes", new { area = "admin" }, null)</li>
+                                <li>@Html.ActionLink(" تعريف اقسام الكورسات  ", "Index", "CourseTypes", new { area = "admin" }, null)</li>
+
+                                <div class="divider"></div>
+                                <li>@Html.ActionLink("تعريف الدبلومات التدريبية", "Index", "Trainings", new { area = "admin" }, null)</li>
+                                <li>@Html.ActionLink("تعريف الكورسات التدريبية", "Index", "Courses", new { area = "admin" }, null)</li>
+                                <li>@Html.ActionLink("تعريف اعتماد الكورسات", "Index", "CourseApprovals", new { area = "admin" }, null)</li>
+                                <div class="divider"></div>
+                                <li>@Html.ActionLink("المستخدمين طالبى الانضمام للدورات", "Index", "RegisterUsers", new { area = "admin" }, null)</li>
+                                <div class="divider"></div>
+                                <li>@Html.ActionLink("Banner الشاشة الرئيسية", "Index", "Banners", new { area = "admin" }, null)</li>
+                                <li>@Html.ActionLink("معرض الصور", "Index", "Galleries", new { area = "admin" }, null)</li>
+                                <div class="divider"></div>
+                                <li>@Html.ActionLink("الاخبار", "Index", "Blogs", new { area = "admin" }, null)</li>
+                                <div class="divider"></div>
+                                <li>@Html.ActionLink("الوظائف", "Index", "Jobs", new { area = "admin" }, null)</li>
+                                <li>@Html.ActionLink("المتقدمين للوظائف", "Index", "JobUsers", new { area = "admin" }, null)</li>
+                                <div class="divider"></div>
+                                <li>@Html.ActionLink("مستخدمين النظام", "Index", "SystemUsers", new { area = "admin" }, null)</li>
+                                @*<div class="divider"></div>
+        <li>@Html.ActionLink("تغيير كلمة المرور", "ChangePassword", "Account")</li>*@
+
+                                @*<li>@Html.ActionLink("السجل", "Index", "Logs")</li>
+        <li>@Html.ActionLink("ضبط الموقع الرئيسى", "Edit", "Settings")</li>*@
+
+                            </ul>
+                        </li>
+
+                        @*<li>@Html.ActionLink("البحث", "Index", "Search")</li>*@
+
+                    }
+
+                </ul>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <ul class="nav navbar-nav" style="float:left">
+                        <li>@Html.ActionLink("تسجيل خروج ( " + User.Identity.Name + " )", "Logout", "Account")</li>
+                    </ul>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        @*<footer>
+            <p>&copy; @DateTime.Now.Year - Eagle</p>
+        </footer>*@
+    </div>
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

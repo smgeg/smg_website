@@ -1,0 +1,44 @@
+﻿@model List<Website.Models.Gallery>
+@{
+    ViewBag.Title = "Events Gallery";
+}
+
+
+<section class="section-66 novi-background bg-cover bg-whisperapprox">
+    <div class="container text-center">
+        <h3>Events gallery</h3>
+        <div class="divider"></div>
+    </div>
+</section>
+
+<section class="section section-50 section-md-75 section-xl-100 novi-background bg-cover bg-default">
+    <div class="container">
+        <div class="row row-30 justify-content-md-center justify-content-lg-start">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-9 col-lg-6 height-fill">
+                    <article class="post-block">
+                        <div class="post-image">
+                            <div class="image-block bg-cover" style="background-image: url(@Url.Content("~/template/img/gallery/" + item.Id + "/" + item.FirstImage ));"></div>
+                        </div>
+                        <div class="post-body">
+                            <h4 class="post-header"><a href="@Url.Action("GalleryDetails" , "Home" , new { id = item.Id})">@(Website.Utility.Utilities.IsArabic ? item.NameAr : item.NameEn)</a></h4>
+                            <ul class="post-meta">
+                                <li class="object-inline">
+                                    <span class="novi-icon icon icon-xxs icon-white material-icons-location_on"></span>
+                                    <span>@(Website.Utility.Utilities.IsArabic ? item.LocationAr : item.LocationEn)</span>
+                                </li>
+                                <li class="object-inline">
+                                    <span class="novi-icon icon icon-xxs icon-white material-icons-query_builder"></span>
+                                    <time datetime="2018-01-01">@item.Date.ToString("dd/MM/yyyy")</time>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+

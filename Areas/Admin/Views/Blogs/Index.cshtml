@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Website.Models.Blog>
+
+@{
+    ViewBag.Title = "الاخبار";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("اضافة", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NameAr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameEn)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.DescriptionAr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescriptionEn)
+        </th>*@
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameAr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameEn)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.DescriptionAr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescriptionEn)
+        </td>*@
+       
+        <td>
+            @Html.ActionLink("تعديل", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("حذف", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

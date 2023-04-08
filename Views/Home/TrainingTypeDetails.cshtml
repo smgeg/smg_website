@@ -1,0 +1,73 @@
+﻿@using Website.Utility
+@model List<Website.Models.Training>
+
+@{
+    ViewBag.Title = ViewBag.header;
+}
+
+
+<section class="novi-background bg-whisperapprox ">
+    <div class="container">
+        <div class="row row-fix flex-lg-row-reverse align-items-lg-end justify-content-lg-end">
+            <div class="col-md-12 col-lg-12 col-xl-12">
+                <div class="section-60 section-md-40 section-md-top-50">
+                    <h3>@ViewBag.header</h3>
+                    <p>@ViewBag.details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-50 section-md-75 section-xl-50 novi-background bg-cover bg-default  bg-whisperapprox ">
+    <div class="container">
+        <div class="row row-fix justify-content-md-center">
+            <div class="col-xl-10 post-classic-wrap">
+                @foreach (var item in Model)
+                {
+                    <article class="post-classic">
+                        <div class="post-main" style="background: white;padding: 12px;">
+                            <div class="post-info">
+                                <img src="@Url.Content("~/template/img/training/" + item.Image)" style="margin-top:50px" alt="" width="113" height="113">
+                                @*<h6 class="post-author">@(Utilities.IsArabic ? item.NameAr : item.NameEn)</h6>*@
+                            </div>
+                            <div class="post-body">
+                                <h4><a href="@Url.Action("TrainingDetails" , "Home" , new { id = item.Id})">@(Utilities.IsArabic ? item.NameAr : item.NameEn)</a></h4>
+                                <p class="text-gray-05">@(Utilities.IsArabic ? item.DescriptionAr : item.DescriptionEn)</p>
+                                <div class="post-footer">
+                                    <ul class="post-meta">
+
+                                        <li class="object-inline">
+                                            <span class="icon novi-icon icon-xxs icon-black material-icons-money_off"></span>
+                                            <span>@item.Price.ToString("N0")</span>
+                                        </li>
+
+                                        <li class="object-inline">
+                                            <span class="icon novi-icon icon-xxs icon-black material-icons-location_on"></span>
+                                            <span>@item.Location</span>
+                                        </li>
+                                        <li class="object-inline">
+                                            <span class="icon novi-icon icon-xxs icon-black material-icons-timer"></span>
+                                            <span>@item.LecturesCount</span> Lectures
+                                        </li>
+                                        @if (item.TrainingDate.HasValue)
+                                        {
+                                            <li class="object-inline">
+                                                <span class="icon novi-icon icon-xxs icon-black material-icons-event"></span>
+                                                <time class="text-gray-05" datetime="@item.TrainingDate.Value.ToString("dd/MM/yyyy")">@item.TrainingDate.Value.ToString("dd/MM/yyyy")</time>
+                                            </li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+

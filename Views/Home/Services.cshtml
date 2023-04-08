@@ -1,0 +1,208 @@
+﻿
+@{
+    ViewBag.Title = Resource.L_Menu_Services;
+}
+
+<section class="section-40 section-md-60 section-lg-90 section-xl-120 bg-gray-dark page-title-wrap overlay-5 custom-bg-image" style="background-image: url(@Url.Content("~/Template/images/bg-image-4.jpg"));">
+    <div class="container">
+        <div class="page-title text-center">
+            <h2>@Resource.L_Menu_Services</h2>
+        </div>
+    </div>
+</section>
+<section class="section-60 section-md-100 bg-gray-lighter novi-background bg-cover">
+    <div class="container">
+        <h3 class="text-lg-center">@Resource.ServicesOverview</h3>
+        <div class="row row-fix justify-content-lg-center">
+            <div class="col-lg-8 col-xl-6">
+                <p class="text-lg-center" @Resource.Services_Desc</p>
+            </div>
+        </div>
+        <div class="row row-60">
+            <div class="col-md-6 col-lg-4">
+                <div class="post">
+                    <img src="~/Template/images/services-6-370x220.jpg" alt="" width="370" height="220">
+                    <h5><a href="#">@Resource.L_OurServices_2_Title</a></h5>
+                    @Html.Raw(Resource.S_Services_1_Desc)
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="post">
+                    <img src="~/Template/images/services-7-370x220.jpg" alt="" width="370" height="220">
+                    <h5><a href="#">@Resource.L_OurServices_3_Title</a></h5>
+                    @Html.Raw(Resource.S_Services_2_Desc)
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="post">
+                    <img src="~/Template/images/services-8-370x220.jpg" alt="" width="370" height="220">
+                    <h5><a href="#">@Resource.L_OurServices_4_Title</a></h5>
+                    @Html.Raw(Resource.S_Services_3_Desc)
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="post">
+                    <img src="~/Template/images/services-8-370x220.jpg" alt="" width="370" height="220">
+                    <h5><a href="#">@Resource.L_OurServices_1_Title</a></h5>
+                    @Html.Raw(Resource.S_Services_4_Desc)
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-60 section-md-90 section-xl-bottom-120 bg-whisperapprox novi-background bg-cover">
+    <div class="container text-center">
+        <h3>@Resource.L_OurPartners</h3>
+
+        <div class="row row-40 text-center text-md-left">
+            <div class="owl-carousel">
+                @for (int i = 1; i < 24; i++)
+                {
+                    @*<div class="col-6 col-md-2">*@
+                    <div class="link-image-wrap"><a class="link-image" href="#"><img src="@Url.Content("~/Template/images/clients-" + i + ".png")" alt="" width="167" height="85"></a></div>
+                    @*</div>*@
+
+                }
+            </div>
+            @section scripts {
+                <script>
+                    $(document).ready(function () {
+                        $('.owl-carousel').owlCarousel({
+                            loop: true,
+                            /*margin: 10,*/
+                            center: true,
+                            autoplay: true,
+                            autoplayTimeout: 2000,
+                            //autoplayHoverPause: true,
+                            //nav: true,
+                            items: 4,
+                            animateOut: 'fadeOut'
+                        });
+                    });
+                </script>
+            }
+        </div>
+    </div>
+</section>
+
+@*<section class="novi-background">
+        <div class="container">
+            <div class="row row-fix flex-lg-row-reverse align-items-lg-end justify-content-lg-end">
+                <div class="col-md-11 col-lg-6 col-xl-5">
+                    <div class="section-60 section-md-90 section-md-top-130">
+                        <h3>Management Services</h3>
+                        <p>Engaging  the services of Investment Company can bring you the peace of mind that comes with knowing you've planned prudently for your future. We are committed to providing you with superior wealth management services. We can offer advice and comprehensive solutions for all of your financial planning needs. We are dedicated to placing your best interests first. Our entire investment philosophy and delivery of services to our clients begins with our core principle to operate in a conflict-free environment.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-6 d-none d-lg-block">
+                    <div class="image-wrap-2">
+                        <img src="~/Template/images/services-1-461x514.jpg" alt="" width="461" height="514">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section parallax-container bg-black" data-parallax-img="@Url.Content("~/Template/images/owl-nextllax-1.jpg")">
+        <div class="material-parallax parallax"><img src="~/Template/images/clients-parallax-1.jpg" alt="" style="display: block; transform: translate3d(-50%, 12px, 0px);"></div>
+        <div class="parallax-content">
+            <div class="section-60 section-md-90 context-dark section-bordered-inside overlay-8">
+                <div class="container">
+                    <div class="text-center">
+                        <h3>Investment Help</h3>
+                        <p class="block-centered text-white-05" style="max-width: 540px;">
+                            Managing capital for institutions and private investors all over the world. Let investment professionals help you.
+
+                        </p>
+                    </div>
+                    <div class="row row-50">
+                        <div class="col-sm-6 col-lg-4">
+                            <article class="icon-box-vertical icon-box-vertical-sm">
+                                <div class="unit flex-column unit-spacing-sm">
+                                    <div class="unit-left"><span class="novi-icon icon icon-primary icon-lg-bigger mercury-icon-chart-up-2"></span></div>
+                                    <div class="unit-body">
+                                        <h5>Wealth Management</h5>
+                                        <p class="text-white-05">Wealth management is the ability of an advisor or advisory team to deliver a full range of financial services and products to an affluent client in a consultative way.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <article class="icon-box-vertical icon-box-vertical-sm">
+                                <div class="unit flex-column unit-spacing-sm">
+                                    <div class="unit-left"><span class="novi-icon icon icon-primary icon-lg-bigger mercury-icon-group"></span></div>
+                                    <div class="unit-body">
+                                        <h5>Stocks, Bonds &amp; Mutual Funds</h5>
+                                        <p class="text-white-05">While stocks typically are higher risk investments due to market volatility, they offer potentially high returns. Let us help you manage your portfolio and offer financial advice. </p>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <article class="icon-box-vertical icon-box-vertical-sm">
+                                <div class="unit flex-column unit-spacing-sm">
+                                    <div class="unit-left"><span class="novi-icon icon icon-primary icon-lg-bigger mercury-icon-screen"></span></div>
+                                    <div class="unit-body">
+                                        <h5>Insurance &amp; Annuities</h5>
+                                        <p class="text-white-05">We offer a variety of solutions from leading financial service providers, so you have many options when deciding what type of annuity is right for you.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <article class="icon-box-vertical icon-box-vertical-sm">
+                                <div class="unit flex-column unit-spacing-sm">
+                                    <div class="unit-left"><span class="novi-icon icon icon-primary icon-lg-bigger mercury-icon-briefcase"></span></div>
+                                    <div class="unit-body">
+                                        <h5>Retirement &amp; College Savings</h5>
+                                        <p class="text-white-05">Finding a balance with your money is a crucial part of personal finance. Saving for retirement does not have to be mutually exclusive from saving for college.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <article class="icon-box-vertical icon-box-vertical-sm">
+                                <div class="unit flex-column unit-spacing-sm">
+                                    <div class="unit-left"><span class="novi-icon icon icon-primary icon-lg-bigger mercury-icon-presentation-3"></span></div>
+                                    <div class="unit-body">
+                                        <h5>Business Owners</h5>
+                                        <p class="text-white-05">You need a financial plan — one that addresses financial needs for every stage of your business life cycle and takes into account your personal financial goals and dreams.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <article class="icon-box-vertical icon-box-vertical-sm">
+                                <div class="unit flex-column unit-spacing-sm">
+                                    <div class="unit-left"><span class="novi-icon icon icon-primary icon-lg-bigger mercury-icon-money"></span></div>
+                                    <div class="unit-body">
+                                        <h5>Cash &amp; Credit</h5>
+                                        <p class="text-white-05">You may select from our comprehensive suite of managed account programs, which are designed for various levels of investment experience and sophistication.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>*@
+
+
+
+
+

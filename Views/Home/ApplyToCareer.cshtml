@@ -1,0 +1,137 @@
+﻿@using Website.Utility
+@model Website.Models.JobUsers
+
+@{
+    ViewBag.Title = Utilities.IsArabic ? Model.Job.NameAr : Model.Job.NameEn;
+}
+
+
+<section class="section section-60 section-md-90 section-xl-bottom-120 novi-background bg-whisperapprox bg-default">
+    <div class="container">
+        @if (ViewBag.success != null)
+        {
+            <h4>@Resource.Thanks , <span><h3>@ViewBag.name</h3></span> @Resource.ForApplying</h4>
+            <h5>@Resource.WeWillContactasap</h5>
+        }
+        else
+        {
+        <div>
+            <h5>@Resource.Applyforjob </h5><h4>@(Utilities.IsArabic ? Model.Job.NameAr : Model.Job.NameEn) </h4>
+        </div>
+        <div class="row  offset-top-1">
+            <div class="col-xl-10">
+                <div class="card-group card-group-custom card-group-light" id="accordionOne" role="tablist" aria-multiselectable="false">
+                    <div class="card card-custom card-light">
+                        <div class="card-heading" id="accordionOneHeading1" role="tab">
+                            <div class="card-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordionOne" href="#accordionOneCollapse1" aria-controls="accordionOneCollapse1" aria-expanded="false" class="collapsed">
+                                    @Resource.JobDescription
+                                    <div class="card-arrow"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-collapse collapse" id="accordionOneCollapse1" role="tabpanel" aria-labelledby="accordionOneHeading1" style="">
+                            <div class="card-body">
+                                <p>@(Utilities.IsArabic ? Model.Job.ShortDescriptionAr : Model.Job.ShortDescriptionEn)</p>
+                                @if (Utilities.IsArabic)
+                                {
+                                    if (!string.IsNullOrEmpty(Model.Job.DescriptionAr))
+                                    {
+                                        <div class="divider-fullwidth bg-gray-light"></div>
+                                        <div class="post-body">
+
+                                            <h4 style="color: #ab232d">@Html.DisplayNameFor(model => model.Job.DescriptionAr).ToHtmlString().Replace("العربى", "")</h4>
+
+                                            <p>@(new HtmlString(Model.Job.DescriptionAr))</p>
+                                        </div>
+                                    }
+
+                                }
+                                else
+                                {
+                                    if (!string.IsNullOrEmpty(Model.Job.DescriptionEn))
+                                    {
+                                        <div class="divider-fullwidth bg-gray-light"></div>
+                                        <div class="post-body">
+
+                                            <h5 style="color: #ab232d">Job details</h5>
+
+                                            <p>@(new HtmlString(Model.Job.DescriptionEn))</p>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-60">
+            <div class="col-lg-9 col-xl-7">
+                <form method="post" action="@Url.Action("ApplyToCareer", "Home")" novalidate="novalidate" enctype="multipart/form-data" id="formSend">
+                    @Html.AntiForgeryToken()
+                    <div class="row row-30">
+                        <div class="col-md-6">
+                            <div class="form-wrap has-error">
+                                @*<input class="form-input form-control-has-validation" id="feedback-3-first-name" type="text" name="AppliedName" data-constraints="@@Required"><span class="form-validation"></span>*@
+                                @Html.TextBoxFor(f=>f.Name , new { data_constraints = "Required" , @class="form-input form-control-has-validation"})
+                                <label class="form-label rd-input-label" for="Name">@Resource.Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-wrap has-error">
+                                @*<input class="form-input form-control-has-validation" id="feedback-3-email" type="email" name="AppliedEmail" data-constraints="@@Email @@Required"><span class="form-validation"></span>*@
+                                @Html.TextBoxFor(f => f.Email, new { data_constraints = "Required", @class = "form-input form-control-has-validation" })
+                                <label class="form-label rd-input-label" for="Email">@Resource.Email</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-wrap has-error">
+                                @*<input class="form-input form-control-has-validation" id="feedback-3-phone" type="text" name="AppliedMobile" data-constraints="@@Numeric @@Required"><span class="form-validation"></span>*@
+                                @Html.TextBoxFor(f => f.Mobile, new { data_constraints = "Required", @class = "form-input form-control-has-validation" })
+                                <label class="form-label rd-input-label" for="Mobile">@Resource.Mobile</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-wrap has-error">
+                                <label class="rd-input-label btn" for="uploadedcv">@Resource.UploadyourCV</label>
+                                <input class="" id="uploadedcv" type="file" style="display: none;" name="uploadedcv"><span class="form-validation"></span>
+                                @section scripts {
+                                <script>
+                                    $(document).ready(function () {
+                                        $('#uploadedcv').change(function () {
+                                            var i = $(this).prev('label').clone();
+                                            var file = $('#uploadedcv')[0].files[0].name;
+                                            $(this).prev('label').text(file);
+                                        });
+
+                                        $("#formSend").submit(function () {
+                                            $(".submitBtn").attr("disabled", true);
+                                            return true;
+                                        });
+                                    });
+                                </script>
+                                }
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row row-offset-5">
+                        <div class="col-md-6">
+                            <input class="button button-primary button-block submitBtn" type="submit" value="@Resource.Apply" />
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+        }
+    </div>
+
+</section>
+
+
+

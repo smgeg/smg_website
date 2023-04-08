@@ -1,0 +1,62 @@
+﻿@model Website.Models.Blog
+@{
+    ViewBag.Title = Website.Utility.Utilities.IsArabic ? Model.NameAr : Model.NameEn;
+}
+
+
+<section class="section-60 section-md-75 section-xl-90 novi-background bg-default">
+    <div class="container">
+        <div class="row row-50 row-fix">
+            <div class="col-lg-12 col-xl-12">
+                <article class="post post-single">
+                    <div class="post-image">
+                        <figure>
+                            <img src="~/Template/img/news/@Model.Image" alt="" style="width:400px;height:200px">
+                        </figure>
+                    </div>
+                    <div class="post-header">
+                        <h4>@(Website.Utility.Utilities.IsArabic ? Model.NameAr : Model.NameEn)</h4>
+                    </div>
+                    <div class="post-meta">
+                        <ul class="list-bordered-horizontal">
+                            <li>
+                                <dl class="list-terms-inline">
+                                    <dt>@Resource.Date</dt>
+                                    <dd>
+                                        <time datetime="2018-01-22">@Model.CreatedOn.Value.ToString("dd MMMM yyyy")</time>
+                                    </dd>
+                                </dl>
+                            </li>
+                            @*<li>
+                                <dl class="list-terms-inline">
+                                    <dt>Posted by</dt>
+                                    <dd>Amelia Condon</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl class="list-terms-inline">
+                                    <dt>Category</dt>
+                                    <dd>Wealth Management</dd>
+                                </dl>
+                            </li>*@
+                        </ul>
+                    </div>
+                    <div class="divider-fullwidth bg-gray-light"></div>
+                    <div class="post-body">
+                        @(Website.Utility.Utilities.IsArabic ? Model.DescriptionAr : Model.DescriptionEn)
+                    </div>
+                    <!--<div class="post-footer">
+                        <h5>Share this blog:</h5>
+                        <ul class="list-inline list-inline-xs">
+                            <li><a class="icon novi-icon icon-xxs-small link-tundora fa-facebook" href="#"></a></li>
+                            <li><a class="icon novi-icon icon-xxs-small link-tundora fa-twitter" href="#"></a></li>-->
+                            @*<li><a class="icon novi-icon icon-xxs-small link-tundora fa-google-plus" href="#"></a></li>
+                            <li><a class="icon novi-icon icon-xxs-small link-tundora fa-pinterest-p" href="#"></a></li>*@
+                        <!--</ul>
+                    </div>-->
+                </article>
+            </div>
+            
+        </div>
+    </div>
+</section>

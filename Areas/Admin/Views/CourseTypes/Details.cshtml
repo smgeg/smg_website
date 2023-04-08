@@ -1,0 +1,49 @@
+﻿@model Website.Models.CourseType
+
+@{
+    ViewBag.Title = "تفاصيل اقسام الكورسات";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NameAr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameAr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameEn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameEn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescriptionAr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescriptionAr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescriptionEn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescriptionEn)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("تعديل", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("عودة الى اقسام الكورسات", "Index")
+</p>

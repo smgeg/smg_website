@@ -1,0 +1,34 @@
+# Ignore Visual Studio files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore build artifacts
+bin/
+obj/
+
+# Ignore NuGet packages
+*.nupkg
+packages/
+
+# Ignore ReSharper files
+_ReSharper*/
+*.resharper
+*.resharper.user
+
+# Ignore .NET Core files
+*.dotnettools
+*.deps.json
+*.dll
+*.exe
+*.pdb
+*.runtimeconfig.json
+*.runtimeconfig.dev.json
+*.csproj.user
+*.obj
+*.cache
+
+# Ignore Node.js files
+node_modules/
